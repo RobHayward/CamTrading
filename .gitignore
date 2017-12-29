@@ -35,4 +35,4 @@ vignettes/*.pdf
 *.doc
 *.docx
 Data/COTdata2006_16.txt
-*Rproj
+*.Rproj
