@@ -31,3 +31,8 @@ vignettes/*.pdf
 # Temporary files created by R markdown
 *.utf8.md
 *.knit.md
+*.pdf
+*.doc
+*.docx
+Data/COTdata2006_16.txt
+*Rproj
