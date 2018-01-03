@@ -1,0 +1,101 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage[comma, sort&compress]{natbib}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usetikzlibrary{arrows,positioning}
+\graphicspath{{../Pictures/}}
+\usepackage{amsmath}
+\bibliographystyle{agsm}
+% Specify base color
+\usecolortheme[named=OliveGreen]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+
+\AtBeginSection[]{
+\begin{frame}
+\vfill
+\centering
+\begin{beamercolorbox}[sep=8pt, center, shadow=true, rounded=true]{title}
+\usebeamerfont{title}\insertsectionhead\par%
+\end{beamercolorbox}
+\vfill
+\end{frame}
+}
+
+% Title and author information
+\title{Introduction}
+\author{Rob Hayward}
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+\section{My background}
+\begin{frame}{About me}
+\begin{itemize}[<+-| alert@+>]
+\item MMS Internatonal 
+\item Bank of America
+\item ABN Amro 
+\item RedTower Research
+\end{itemize}
+\end{frame}
+
+\section{What I cannot do}
+\begin{frame}{What I cannot do}
+\begin{itemize}[<+-| alert@+>]
+\item Give you a formula to print money
+\item Tell you where Bitcoin will be tomorrow
+\item Teach you a system
+\end{itemize}
+\end{frame}
+
+\section{Where we will go}
+\begin{frame}{Where will we go}
+\begin{itemize}[<+-| alert@+>]
+\item Discuss structure and evolution of financial markets
+\item Talk abotu expectations and the way that information gets into asset prices
+\item Look at technical trading rules and event studies
+\item Allow you to develop your own methods of identgifying inefficiencies
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Key points}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Can we achieve returns that are more than just compensation for taking risk? 
+\item Why
+\begin{itemize}
+\item where is the inefficiency?
+\item is it institutional or behavioural?
+\end{itemize}
+\item Otherwise, we may be getting a return for taking risk
+\end{itemize}
+\end{frame}
+
+
+
+%\item \href{https://www.youtube.com/watch?v=V2CK2TatM_U}{Dutch auction}
+%\item \href{https://www.youtube.com/watch?v=qBRUPZPIu4Q}{English auction}
+%
+%\begin{frame}{Open outcry}
+%\begin{center}
+%\includegraphics[height = 2.6in, trim = 00 20 00 20]{Open-Out-Cry.jpg}
+% trim is left, lower, right, upper
+%\end{center}
+
+\end{document}

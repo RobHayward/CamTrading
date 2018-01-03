@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<todo version="0.1.20">
+    <note priority="veryhigh" time="1514710515" done="1514966406">
+        Create an introductiona and conclusion file
+        <comment>
+            Set up for discussion
+        </comment>
+    </note>
+    <note priority="medium" time="1514966453">
+        Create a list of readings for each session
+    </note>
+</todo>
