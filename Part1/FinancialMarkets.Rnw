@@ -48,7 +48,7 @@
 \section{Introduction}
 \begin{frame}{Markets}
 \begin{center}
-\includegraphics[height = 2.6in, trim = 10 20 00 20]{market.jpeg}
+\includegraphics[height = 2.6in, trim = 10 20 00 16]{Fin.jpg}
 % trim is left, lower, right, upper
 \end{center}
 \end{frame}
@@ -59,6 +59,9 @@ The study of markets
 \item Institutional features and how they have changed over time
 \item Price discovery: the way that information gets into the price
 \end{itemize}
+\vspace{5mm}
+\pause
+They are related
 \end{frame}
 
 \section{Institutional Structures}
@@ -66,9 +69,9 @@ The study of markets
 There are three major ways that financial markets can be organised
 \pause
 \begin{itemize}[<+-| alert@+>]
-\item \emph{open outcry}
-\item dealer-orientated or market-maker systems
-\item electronic order markets
+\item \emph{Open outcry}
+\item Dealer-orientated or market-maker systems
+\item Electronic order markets
 \end{itemize}
 \end{frame}
 
@@ -125,6 +128,7 @@ Margin means that you do not have to put up all the money immediately
 \item you can buy \$2 million stock with your \$1 million
 \item if shorts are 150\%
 \item you can sell \$2 million stock with your \$1 million
+% this is the 2 million from the stock and 1 million that you already have. 
 \end{itemize}
 \end{block}
 \pause
@@ -172,8 +176,9 @@ The exchanges are public companies
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Liquidity is important
-\item Different players have different objecitves, information and time frames
+\item Different players have different objectives, information and time frames
 \item Financing and liquidity may disappear when they are most needed - this is one of the unobserved risks
+\item Transparency has increased
 \end{itemize}
 \end{frame}
 
