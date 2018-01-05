@@ -141,17 +141,17 @@ Kyle (1985) - \emph{Continuous Auctions and Insider Trading} \emph{Econometrica}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Kyle (1985)}
-Key characteristics of the Kyle model which have been used more generally in microstructure to assess market conditions
-\pause
-\begin{itemize}[<+-| alert@+>]
-\item `Tightness' - the bid-offer spread
-\item `Depth' - the price move for a specific order size
-\item `Resilience' - Speed that price returns to equilibrium
-\end{itemize}
-\pause
-A. Persuad identified \emph{`Liquidity Black Holes'} in State Street Global Insight.  This emphasises the importance of diversity of opinion otherwise there is a risk that 'positive feedback is created
-\end{frame}
+%\begin{frame}{Kyle (1985)}
+%Key characteristics of the Kyle model which have been used more generally in microstructure to assess market conditions
+%\pause
+%\begin{itemize}[<+-| alert@+>]
+%\item `Tightness' - the bid-offer spread
+%\item `Depth' - the price move for a specific order size
+%\item `Resilience' - Speed that price returns to equilibrium
+%\end{itemize}
+%\pause
+%A. Persuad identified \emph{`Liquidity Black Holes'} in State Street Global Insight.  This emphasises the importance of diversity of opinion otherwise there is a risk that 'positive feedback is created
+%\end{frame}
 
 
 \section{Intrinsic Value}
@@ -194,18 +194,19 @@ American Economic Review 1980 \textbf{80}
 \includegraphics[height = 3.0in]{TradingScreen}
 \end{center}
 \end{frame}
-%\begin{frame}{For the presentation}
-%Either
-%\pause
-%\begin{itemize}[<+-| alert@+>]
-%\item Create a diversified portfolio with minimal cost and risk
-%\item Find an inefficiency
-%\end{itemize}
-%\pause
-%\begin{block}{}
-%Excess return must be more than just a compensation for taking risk
-%\end{block}
-%\end{frame}
+
+\begin{frame}{For the assignment}}
+Either
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Create a diversified portfolio with minimal cost and risk
+\item Find an inefficiency
+\end{itemize}
+\pause
+\begin{block}{}
+Excess return must be more than just a compensation for taking risk
+\end{block}
+\end{frame}
 
 \begin{frame}{Efficient reaction to information}
 <<info1, echo=FALSE, fig.height=4.8,warning=FALSE,message=FALSE>>=
@@ -254,7 +255,7 @@ text(2.4, 6, "Overshooting")
 \end{frame}
 
 \begin{frame}{Short-term speculative techniques}
-There are four \emph{flavours} of short-term speculative technique
+There are five \emph{flavours} of short-term speculative technique
 \begin{itemize}[<+-| alert@+>]
 \item Carry-trade
 \item Momentum
