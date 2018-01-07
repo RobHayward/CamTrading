@@ -6,7 +6,7 @@
 \usepackage{caption}
 \usepackage{tikz}
  \usetikzlibrary{arrows,positioning}
-\usepackage{multirow}
+%\usepackage{multirow}
 % Specify base color
 \usecolortheme[named=OliveGreen]{structure}
 % See http://goo.gl/p0Phn for other colors

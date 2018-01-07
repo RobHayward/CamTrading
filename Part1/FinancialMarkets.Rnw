@@ -164,6 +164,117 @@ The exchanges are public companies
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Banks and credit}
+Banks are not an important part of the story but...
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Credit is cyclical
+\item It will disappear when it is most required
+\item Keynes: the market can remain irrational longer than you can remain solvent
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Investment banks}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Investment banks
+\begin{itemize}
+\item sales
+\item trading
+\end{itemize}
+\item Regulation
+\begin{itemize}
+\item use of customer information
+\end{itemize}
+\item Liquidity
+\begin{itemize}
+\item capital requirements
+\item Volcker rule
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Funds}
+There is a range of funds
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item ETF
+\item Pension-insurance
+\item Active-passive
+\item Hedge funds
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Historical perspective}
+\begin{itemize}[<+-| alert@+>]
+\item 1949: Alfred Jones
+\begin{itemize}
+\item Use of leverage and short-selling to protect fund
+\item Buying winners and selling losers
+\item Jones kept 20\% of the returns
+\item Success inspired \emph{copy-cats}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{History 2}
+\begin{itemize}[<+-| alert@+>]
+\item 1980s
+\begin{itemize}
+\item George Soros (Quantum fund): "Black Wednesday"
+\item Julian Robertson (Tiger Fund): St. Valentine's Day Massacre
+\item LTCM
+\end{itemize}
+\item After year 2000
+\begin{itemize}
+\item Greenwich Connecticut 
+\item Mayfair London
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Alternative}
+These funds are \emph{alternative} in a number of ways
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Leverage
+\item Less regulation (sophisticated investors)
+\item More risk (derivatives and lack of diversification)
+\item \emph{Alpha}
+\item \emph{Alternative beta}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Indices and analysis}
+\begin{itemize}[<+-| alert@+>]
+\item A number of organisations study hedge funds
+\begin{itemize}
+\item \href{http://www.hedgeindex.com/hedgeindex/en/default.aspx?cy=USD}{Credit-Suisse}
+\item \href{http://www.edhec-risk.com/}{EDHEC-Risk Institute}
+\item \href{http://www.greenwichai.com/}{Greenwich Alternative Investments}
+\end{itemize}
+\item You must register to get access to data
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Strategies}
+\begin{itemize}[<+-| alert@+>]
+\item Alpha
+\begin{itemize}
+\item Emerging markets
+\item Managed futures
+\item Fixed income arbitrage
+\end{itemize}
+\item Market neutral 
+\begin{itemize}
+\item Short-bias
+\item Event
+\item Convertible arbitrage
+\item Global macro
+\end{itemize}
+\end{itemize}
+\end{frame}
+
 \section{Take away}
 \begin{frame}{Liquidity}
 \begin{center}
@@ -182,7 +293,7 @@ The exchanges are public companies
 \end{itemize}
 \end{frame}
 
-\section{Further reading}
+\section{Additional Resources}
 \begin{frame}{Further reading}
 \begin{itemize}[<+-| alert@+>]
 \item Kyle, A., Continuous Auctions and Insider Trading, Econometrica, 1985.

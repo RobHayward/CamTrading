@@ -12,6 +12,7 @@
 % Specify other colors and options as required
 \setbeamercolor{alerted text}{fg=Maroon}
 \setbeamertemplate{items}[square]
+\graphicspath{{../Pictures/}}
 
 % Title and author information
 \title{Returns and Price Discovery}
@@ -28,17 +29,83 @@
 \tableofcontents
 \end{frame}
 
+\section{Expectations}
+\begin{frame}{Information and expectations}
+If investors are \emph{informed}, expectations are most important
+\pause
+\begin{block}{}
+Prices will move when new information changes expectations
+\end{block}
+\pause
+\vspace{5mm}
+Information and expectations are key
+\end{frame}
+\begin{frame}{What is expected?}
+This is a bigger problem than would be anticipated
+\pause
+\begin{block}{}
+\textbf{Problem}\\
+Radio:``BP shares rose $10\%$ despite the company losing $\$10mn$ in the first half of the year"
+\end{block}
+\pause
+\begin{block}{}
+\textbf{Answer}\\
+They were expected to lose $\$15mn$
+\end{block}
+\end{frame}
+
+\begin{frame}{Assessing expectations}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item The market price is a distillation of a range of expectations
+\item The price is some sort of \emph{weighted average} of these expectations
+\begin{itemize}
+\item Weighted by intensity of belief
+\item Weighted by money
+\end{itemize}
+\item It is not necessarily normally distributed
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The distribution of expectations}
+For example
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item \textbf{Positive skew} most people have a consensus belief but there are some extremely positive views
+\item \textbf{Negative skew} most people have a consensus belief that there are some extremely negative views
+\item \textbf{Bimodal distribution} there are two nodes to expectation that are some way from each other. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Effect of disappointed expectations}
+How are changes in expectations likely to affect market performance? 
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item What sort of position are held by short-term speculative accounts? 
+\item What sort of positions are held by long-term stable accounts (real money)? 
+\item Where are the \emph{take-profits} and \emph{stop-losses}
+\end{itemize}
+\end{frame}
+
 \section{Random Walk}
 \begin{frame}{The Random Walk}
 The \emph{random walk} is defined as 
+\pause
 \begin{align*}
 p_t &= p_{t-1} + \epsilon_t,  \hspace{6pt} \text{where} \hspace{6pt}  \epsilon \sim N(0, \sigma^2)\\
 p_t - p_{t-1} &= \epsilon_t\\
 \Delta p_t &= \epsilon_t\\
-R_t &= \epsilon_t
 \end{align*}
 \pause
-Therefore, the change in price cannot be anticipated and the \emph{random variable} $\epsilon_t$ can be considered as news. 
+Therefore, the change in price cannot be anticipated and the \emph{random variable} $\epsilon_t$ can be considered as news or information. 
+\end{frame}
+
+\begin{frame}{Centering the distribution}
+<<dist, fig.height=4, echo=FALSE>>=
+x <- seq(-4, 4, 0.1)
+y <- rnorm(10000, 0, 1)
+hist(y, main = "Distribution of news", xlab = "Positive or negative", ylab = "Frequency", prob = TRUE)
+@
 \end{frame}
 
 \begin{frame}{EMH}
@@ -67,7 +134,7 @@ plot(x, type = 'l', main = "Stock A")
 
 \begin{frame}{Price plot Stock B}
 <<emh2, echo = FALSE, fig.height = 4.5, warning=FALSE, message=FALSE>>=
-BAC <- read.csv("Data/BAC.csv")
+BAC <- read.csv("../Data/BAC.csv")
 BAC <- BAC[rev(rownames(BAC)),]
 plot(BAC[1:100, 2], type = 'l', main = "Stock B", ylab = "x")
 @
@@ -195,7 +262,7 @@ American Economic Review 1980 \textbf{80}
 \end{center}
 \end{frame}
 
-\begin{frame}{For the assignment}}
+\begin{frame}{For the assignment}
 Either
 \pause
 \begin{itemize}[<+-| alert@+>]
@@ -257,6 +324,7 @@ text(2.4, 6, "Overshooting")
 \begin{frame}{Short-term speculative techniques}
 There are five \emph{flavours} of short-term speculative technique
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item Carry-trade
 \item Momentum
 \item Contrarian

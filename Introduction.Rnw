@@ -48,7 +48,7 @@
 \section{My background}
 \begin{frame}{About me}
 \begin{itemize}[<+-| alert@+>]
-\item MMS Internatonal 
+\item MMS International 
 \item Bank of America
 \item ABN Amro 
 \item RedTower Research
@@ -59,8 +59,8 @@
 \begin{frame}{What I cannot do}
 \begin{itemize}[<+-| alert@+>]
 \item Give you a formula to print money
-\item Tell you where Bitcoin will be tomorrow
 \item Teach you a system
+\item Tell you where Bitcoin will be tomorrow
 \end{itemize}
 \end{frame}
 
@@ -68,12 +68,28 @@
 \begin{frame}{Where will we go}
 \begin{itemize}[<+-| alert@+>]
 \item Discuss structure and evolution of financial markets
-\item Talk abotu expectations and the way that information gets into asset prices
+\item Talk about expectations and the way that information gets into asset prices
 \item Look at technical trading rules and event studies
-\item Allow you to develop your own methods of identgifying inefficiencies
+\item Allow you to develop your own methods of identifying inefficiencies
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Issues}
+There are a number of decisions that I have made to simplify:
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Data
+\begin{itemize}
+\item I have provided data in csv format
+\item data is big business
+\end{itemize}
+\item Programmes
+\begin{itemize}
+\item Excel
+\item Python and R
+\end{itemize}
+\end{itemize}
+\end{frame}
 \begin{frame}{Key points}
 \begin{itemize}[<+-| alert@+>]
 \pause
