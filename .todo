@@ -36,6 +36,15 @@
     <note priority="high" time="1515146530">
         Make sure that there is some distinction between uncertainty and risk
     </note>
+    <note priority="high" time="1515654302">
+        Set out clearly the assignment options - rates, event, tech, pairs or diversified portfolio
+    </note>
+    <note priority="high" time="1515823492">
+        Something about volatility and option strangles
+    </note>
+    <note priority="high" time="1515826666">
+        Sectoral trade REIT vs financials. Can this be done with ETF?
+    </note>
     <note priority="medium" time="1514966453">
         Create a list of readings for each session
     </note>
@@ -54,6 +63,9 @@
     <note priority="medium" time="1515312262">
         In expectatiionsandpricediscovery, I don't think that we need the short-term speculative techniques. This can be moved to Part4
     </note>
+    <note priority="medium" time="1515824177">
+        Environment is changing with new regulation on contracts for difference and binary options
+    </note>
     <note priority="low" time="1515065592">
         Think about adding details on investment bank trading and sales
     </note>
@@ -62,5 +74,14 @@
     </note>
     <note priority="low" time="1515310456">
         Something more about the history and evolution of markets - including mft and automation
+    </note>
+    <note priority="low" time="1515353513">
+        Something about CAPE. It is in the Research Affiliates email early Jan
+    </note>
+    <note priority="low" time="1515923114">
+        Remove Expectations.Rnw from part2
+    </note>
+    <note priority="verylow" time="1515313535">
+        Dont forget the human element here. Do human emotions and semtiment change regimes
     </note>
 </todo>

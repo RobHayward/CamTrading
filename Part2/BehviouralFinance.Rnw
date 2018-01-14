@@ -396,8 +396,8 @@ However, noise-trader risk may limit arbitrage
 \end{itemize}
 \end{frame}
 
-\begin{frame}{The presentation}
-For the presentation
+\begin{frame}{The Assignment}
+For the assignment
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Look for example of gradual reaction to news
