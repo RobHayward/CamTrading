@@ -299,6 +299,9 @@ These funds are \emph{alternative} in a number of ways
 \item Kyle, A., Continuous Auctions and Insider Trading, Econometrica, 1985.
 \item \href{https://financial.thomsonreuters.com/en/products/trading-capabilities/foreign-exchange-markets/fxall-electronic-trading-platform.html}{FXall}
 \item \href{https://www.ig.com/uk}{IG index}
+\item \href{http://www.greenwichai.com/}{Greenwich Alternative Investments}
+\item \href{https://lab.credit-suisse.com}{CreditSuisse Indices}
+\item \href{https://edhec.risk.com}{EDHEC-Risk}
 \end{itemize}
 \end{frame}
 

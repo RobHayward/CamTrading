@@ -29,17 +29,18 @@
 \tableofcontents
 \end{frame}
 
-\section{Expectations}
-\begin{frame}{Information and expectations}
-If investors are \emph{informed}, expectations are most important
+\section{Introduction}
+\begin{frame}{Expectations}
+However, expectations are formed, 
+\begin{itemize}[<+-| alert@+>]
 \pause
-\begin{block}{}
-Prices will move when new information changes expectations
-\end{block}
-\pause
-\vspace{5mm}
-Information and expectations are key
+\item Financial markets are moved by \emph{surprises}
+\item This makes it imperative to know what is embedded in the current market price
+\item There is some sort of distribution of expectations with a range and an expected (mean) value
+\item Shackle and \emph{Kalediostatics} 
+\end{itemize}
 \end{frame}
+
 \begin{frame}{What is expected?}
 This is a bigger problem than would be anticipated
 \pause
@@ -234,15 +235,15 @@ If the intrinsic value is known, buy when the market price is below intrinsic va
 \end{itemize}
 \end{frame}
 
-\begin{frame}{RIT - price discovery cases}
-Three cases
-\pause
-\begin{itemize}[<+-| alert@+>]
-\item Case 1 - information about the intrinsic value is gradually unveiled.  Traders do not have the same information 
-\item Case 2 - Information about the intrinsic value become more precise with time
-\item Case 3 - Information becomes more precise with time and there is an exchange traded fund (ETF) that based on the value of the two securities that provides arbitrage opportunities  
-\end{itemize}
-\end{frame}
+%\begin{frame}{RIT - price discovery cases}
+%Three cases
+%\pause
+%\begin{itemize}[<+-| alert@+>]
+%\item Case 1 - information about the intrinsic value is gradually unveiled.  Traders do not have the same information 
+%\item Case 2 - Information about the intrinsic value become more precise with time
+%\item Case 3 - Information becomes more precise with time and there is an exchange traded fund (ETF) that based on the value of the two securities that provides arbitrage opportunities  
+%\end{itemize}
+%\end{frame}
 
 \begin{frame}{Grossman and Stiglitz}
 \emph{On the Impossibility of Informationally Efficient Markets}\\
@@ -262,6 +263,77 @@ American Economic Review 1980 \textbf{80}
 \end{center}
 \end{frame}
 
+\section{Interest rate expectations}
+\begin{frame}{Interest rate expectations}
+There are a number of ways that interest rate expectations can be determined 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item A poll of people (economists?)
+\item Short-term interest rate futures (STIRS)
+\item Implied forward rates
+\end{itemize}
+\end{frame}
+
+\section{US interest rates}
+
+\begin{frame}{US interest rates}
+<<money, echo=FALSE, fig.height=4.6, fig.width=6.7, cache=TRUE>>=
+da <- read.csv('../Data/Rate.csv', skip = 5)
+da$Date <- as.Date(da$Time.Period, format = "%Y-%m-%d")
+  plot(da$Date, da[,2], type = 'l', main = "US Official Interest Rate", col = 'OliveGreen', 
+     xlab = "Year", ylab = "Rate")
+@
+\end{frame}
+
+\section{Specifications}
+\begin{frame}{CME Eurodollar}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Unit of trading: \$1000000
+\item Delivery: Mar, Jun, Sep and Dec. 
+\item Quotation: 100 minus rate of interest
+\item Minimum price fluctuation: 0.005 (0.0025 first month)
+\item $ \$1000000 \times 0.05/100 \times 0.25 = \$12.50$
+\item Last trading day: 10.00 two business days prior to the third Wednesday of the delivery month
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Specification}
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{llll}
+Contract & Code & Price & Value\\
+\hline
+Mar 2018 & H18 & 98.155& 1.845\\
+Jun 2018 & M18 & 97.955 & 2.045\\ 
+Sep 2018 & U18 & 97.82 &2.18\\
+Dec 2018 & Z18 & 97.70& 2.30\\
+\hline
+\end{tabular}
+\end{center}
+\href{www.cmegroup.com/trading/interest-rates/eurodollar.html}{Latest CME Prices}
+\end{frame}
+
+\begin{frame}{Trading opportunities}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Rate expectations
+\item Natural levels for expectations (support and resistanc)
+\item Spreads between different months (reduces risk)
+\item Spreads between different counties (link to foreign exchange)
+\end{itemize}
+\end{frame}
+
+\section{Further reading}
+\begin{frame}{Further reading}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item \href{http://timharford.com/2016/03/how-to-make-good-guesses/}{Tim Harford}
+\item \href{www.cmegroup.com/trading/interest-rates/eurodollar.html}{Latest CME Prices}
+\item \href{https://www.theice.com/products/38527986/Three-Month-Euribor-Futures}{ICE 3m Euribor}
+\item 
+\end{itemize}
+\end{frame}
 \begin{frame}{For the assignment}
 Either
 \pause
@@ -321,17 +393,6 @@ text(2.4, 6, "Overshooting")
 @
 \end{frame}
 
-\begin{frame}{Short-term speculative techniques}
-There are five \emph{flavours} of short-term speculative technique
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Carry-trade
-\item Momentum
-\item Contrarian
-\item Arbitrage
-\item Liqidity provision
-\end{itemize}
-\end{frame}
 
 
 \end{document}

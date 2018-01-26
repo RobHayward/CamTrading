@@ -60,6 +60,17 @@
 \section{Next steps}
 \section{The assignment}
 
+\begin{frame}{Short-term speculative techniques}
+There are five \emph{flavours} of short-term speculative technique
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Carry-trade
+\item Momentum
+\item Contrarian
+\item Arbitrage
+\item Liqidity provision
+\end{itemize}
+\end{frame}
 
 
 %\item \href{https://www.youtube.com/watch?v=V2CK2TatM_U}{Dutch auction}
