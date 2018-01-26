@@ -4,7 +4,7 @@
 \usetheme{Madrid}
 % See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
 \usepackage{caption}
-\usepackage{listing}
+%\usepackage{listing}
 \usepackage{amsmath}
 \usepackage{tikz}
 \usepackage{caption}
@@ -176,7 +176,7 @@ Highs and lows are very important: they show where buying and selling pressure w
 \begin{frame}{SP 500}
 <<hlc, echo = FALSE, fig.height=4.6, message=FALSE, warning=FALSE>>=
 library(tseries)
-da <- read.csv("../BehaviouralFinance/Data/GSPC.csv")
+da <- read.csv("../Data/GSPC.csv")
 da$Date <- as.Date(da$Date, format = "%d/%m/%Y")
 da1 <- da[(da$Date  > as.Date("2014-12-25", format = "%Y-%m-%d") 
               & da$Date < as.Date("2015-02-15", format = "%Y-%m-%d")),]
@@ -207,7 +207,7 @@ Support and resistance may also relate to fundamental levels (GRY for bonds, PE 
 \begin{frame}{SP 500}
 <<hlc1, echo = FALSE, fig.height=4.6, message=FALSE, warning=FALSE>>=
 library(tseries)
-da <- read.csv("../BehaviouralFinance/Data/GSPC.csv")
+da <- read.csv("../Data/GSPC.csv")
 da$Date <- as.Date(da$Date, format = "%d/%m/%Y")
 da1 <- da[(da$Date  > as.Date("2014-12-25", format = "%Y-%m-%d") 
               & da$Date < as.Date("2015-02-15", format = "%Y-%m-%d")),]
@@ -251,7 +251,7 @@ da1 <- da1[rev(rownames(da1)),]
 dat <- as.ts(da1[,c(2:5)])
 plotOHLC(dat, origin = "2014-01-01", ylab = "SP500", main = "Trendlne break") 
 x <- c(22, 350)
-y <- c(min(da1$Low), 1900) 
+y <- c(min(da1$Low), 1896) 
 lines(x,y, col = "DarkGreen")
 @
 \end{frame} 
