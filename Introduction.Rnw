@@ -34,7 +34,6 @@
 \title{Introduction}
 \author{Rob Hayward}
 
-
 \begin{document}
 
 \begin{frame}
@@ -59,8 +58,16 @@
 \begin{frame}{What I cannot do}
 \begin{itemize}[<+-| alert@+>]
 \item Give you a formula to print money
-\item Teach you a system
+\item Teach you an unfalible system
 \item Tell you where Bitcoin will be tomorrow
+\end{itemize}
+\end{frame}
+
+\begin{frame}{What I can do}
+\begin{itemize}[<+-| alert@+>]
+\item Show you how financial markets work
+\item Help you develop some systems that will help you find inefficiencies and manage your own portfolio
+\item Get you to think more about risk and uncertainty
 \end{itemize}
 \end{frame}
 
@@ -71,6 +78,7 @@
 \item Talk about expectations and the way that information gets into asset prices
 \item Look at technical trading rules and event studies
 \item Allow you to develop your own methods of identifying inefficiencies
+\item Discuss cheap and effective methods to manage your own portfolio
 \end{itemize}
 \end{frame}
 
@@ -90,6 +98,7 @@ There are a number of decisions that I have made to simplify:
 \end{itemize}
 \end{itemize}
 \end{frame}
+
 \begin{frame}{Key points}
 \begin{itemize}[<+-| alert@+>]
 \pause
@@ -102,16 +111,5 @@ There are a number of decisions that I have made to simplify:
 \item Otherwise, we may be getting a return for taking risk
 \end{itemize}
 \end{frame}
-
-
-
-%\item \href{https://www.youtube.com/watch?v=V2CK2TatM_U}{Dutch auction}
-%\item \href{https://www.youtube.com/watch?v=qBRUPZPIu4Q}{English auction}
-%
-%\begin{frame}{Open outcry}
-%\begin{center}
-%\includegraphics[height = 2.6in, trim = 00 20 00 20]{Open-Out-Cry.jpg}
-% trim is left, lower, right, upper
-%\end{center}
 
 \end{document}

@@ -34,7 +34,6 @@
 \title{Parting thoughts}
 \author{Rob Hayward}
 
-
 \begin{document}
 
 \begin{frame}
@@ -60,6 +59,18 @@
 \section{Next steps}
 \section{The assignment}
 
+\begin{frame}
+The assignment
+The broad choice
+\begin{itemize}[<+-| alert@+>]
+\item Interest rate expectations
+\item A technical trading rule
+\iten An Event study
+\item A Pairs trade
+\item A Portfolio Construction
+\end{itemize}
+\end{frame}
+
 \begin{frame}{Short-term speculative techniques}
 There are five \emph{flavours} of short-term speculative technique
 \begin{itemize}[<+-| alert@+>]
@@ -71,15 +82,3 @@ There are five \emph{flavours} of short-term speculative technique
 \item Liqidity provision
 \end{itemize}
 \end{frame}
-
-
-%\item \href{https://www.youtube.com/watch?v=V2CK2TatM_U}{Dutch auction}
-%\item \href{https://www.youtube.com/watch?v=qBRUPZPIu4Q}{English auction}
-%
-%\begin{frame}{Open outcry}
-%\begin{center}
-%\includegraphics[height = 2.6in, trim = 00 20 00 20]{Open-Out-Cry.jpg}
-% trim is left, lower, right, upper
-%\end{center}
-
-\end{document}

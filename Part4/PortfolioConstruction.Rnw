@@ -8,7 +8,7 @@
  \usetikzlibrary{arrows,positioning}
 \usepackage[absolute, overlay]{textpos}
 \definecolor{MyBrown}{RGB}{180, 151, 90}
-\usepackage{multirow}
+%\usepackage{multirow}
 \usepackage[comma, sort&compress]{natbib}
 \usepackage{graphicx}
 \graphicspath{{../Pictures/}}
@@ -31,8 +31,9 @@
   \vfill
   \end{frame}
 }
+\begin{document}
 % Title and author information
-\title{Modern Portfolio Theory}
+\title{Constructing your own portfolio}
 \author{Rob Hayward}
 \date{Feb-2018}
 
