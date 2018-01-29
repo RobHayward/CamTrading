@@ -294,16 +294,22 @@ These funds are \emph{alternative} in a number of ways
 \end{frame}
 
 \section{Additional Resources}
-\begin{frame}{Further reading}
+\begin{frame}{Additional resources 1}
 \begin{itemize}[<+-| alert@+>]
 \item Kyle, A., Continuous Auctions and Insider Trading, Econometrica, 1985.
 \item \href{https://financial.thomsonreuters.com/en/products/trading-capabilities/foreign-exchange-markets/fxall-electronic-trading-platform.html}{FXall}
-\item \href{https://www.ig.com/uk}{IG index}
+\item \href{https://www.ig.com{IG index}
 \item \href{http://www.greenwichai.com/}{Greenwich Alternative Investments}
 \item \href{https://lab.credit-suisse.com}{CreditSuisse Indices}
 \item \href{https://edhec.risk.com}{EDHEC-Risk}
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Additioinal resources 2}
+\begin{itemize}[<+-| alert@+>]
+\item \href{https://finance.yahoo.com/}{Yahoo Finance}
+\item \href{https://www.google.com}{Google Finance}
+\item \href{https://www.ig.com}{IG Index}
+\item \href{https://www.quandl.com}{Quandl}
 
 \end{document}

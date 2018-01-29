@@ -351,7 +351,43 @@ The proliferation of ETF has raised some concerns
 \end{itemize}
 \end{frame}
 
-%\section{Smart beta}
+\section{Portfolio Construction}
+\begin{frame}{Portfolio construction}
+Begin by thinking about asset allocation
+\begin{itemize}[<+-| alert@+>]
+\item US stocks (SPY)
+\item US bonds (TLT)
+\item EEM MSCI emerging markets
+\item GLD Gold index
+\item EWJ MSCI Japan 
+\item XLK Technology sector
+\item LQD Investment grade corporate bond
+\item RSP Equal-weight S\&P 500
+\item USO US oil
+\item BOND Pimco active bond investment
+\begin{table}
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{l p{3cm} l}
+\textbf{Ticker} & \textbf{Description} & \textbf{Cost}\\
+\hline
+SPY & S\&P 500 index & 0.09\\
+TLT & 10-year plus government & 0.15\\ 
+EEM & MSCI emerging markets & 0.48\\
+GLD & Gold index & 0.40\\
+EWJ & MSCI Japan & 0.48\\
+XLK & Technology sector & 0.15\\
+LQD & Investment grade corporate bond & 0.15\\
+RSP & Equal-weight S\&P 500 & 0.48\\
+USO & US oil & 0.66\\
+QQQ & NASDAQ technology & 0.20\\
+BOND&  Pimco active bond investment & 0.55\\
+\end{tabular}
+\end{center}
+\end{table}
+\end{frame}
+
+\section{Smart beta}
 %\begin{frame}{Criticisms of index investment}
 %There are a number of persistent criticisms of using traditional indices as the basis for investment
 %\begin{itemize}[<+-| alert@+>]
@@ -817,18 +853,42 @@ Sharpe Ratio & 0.45 & 0.72
 Risk-parity vs traditional average 1946 to 2015: Dalio, Prince, Jensen (2015)
 \end{frame}
 
-\section{Criticism}
-\begin{frame}{Criticisms of Smart Beta and Factor Investment}
-There are a number of criticism of Smart Beta (ironically, these have recently 
-come from \textbf{Research Affiliates}). 
+\begin{frame}{Explosion of factors and ETFs}
 \begin{itemize}[<+-| alert@+>]
-\pause
-\item Data mining
-\item Exploitation of the inefficiency should remove that inefficiency
-\item Factors depend on underlying economic conditions
-\item Factors can become crowded or expensive 
+\item The rise of thematic ETFs
+\begin{itemize}
+\item Millennials: consumer, entertainment and technology 
+\item Health and well-being: health spending, exercise etc
+\item Diversity: women on boards
+\item Disruption: technology effects on consumer behaviour and business models
+\item Silver: pinpointing the spending power and longevity of \emph{baby-boomers}
+\item HACK: companies that benefit from cyber security
+\end{itemize}
 \end{itemize}
 \end{frame}
+
+\begin{frame}{MAGA ETF}
+\begin{center}
+\includegraphics[scale = 0.6]{trump}
+\end{center}
+\begin{itemize}
+\item Rank firms according to the way they benefit from GOP policy
+\item Long winners from EU breakup; short losers
+\end{itemize}
+\end{frame}
+
+%\section{Criticism}
+%\begin{frame}{Criticisms of Smart Beta and Factor Investment}
+%There are a number of criticism of Smart Beta (ironically, these have recently 
+%come from \textbf{Research Affiliates}). 
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item Data mining
+%\item Exploitation of the inefficiency should remove that inefficiency
+%\item Factors depend on underlying economic conditions
+%\item Factors can become crowded or expensive 
+%\end{itemize}
+%\end{frame}
 
 \begin{frame}{Torture the data until it speaks}
 \begin{center}
@@ -900,30 +960,6 @@ R. Arnott studied performance of factors before and after publication
 %* Statistically significant
 %\end{frame}
 
-\begin{frame}{Explosion of factors and ETFs}
-\begin{itemize}[<+-| alert@+>]
-\item The rise of thematic ETFs
-\begin{itemize}
-\item Millennials: consumer, entertainment and technology 
-\item Health and well-being: health spending, exercise etc
-\item Diversity: women on boards
-\item Disruption: technology effects on consumer behaviour and business models
-\item Silver: pinpointing the spending power and longevity of \emph{baby-boomers}
-\item HACK: companies that benefit from cyber security
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}{MAGA ETF}
-\begin{center}
-\includegraphics[scale = 0.6]{trump}
-\end{center}
-\begin{itemize}
-\item Rank firms according to the way they benefit from GOP policy
-\item Long winners from EU breakup; short losers
-\end{itemize}
-\end{frame}
-
 \begin{frame}{Fickle Factors}
 How resilient are these factors? 
 \begin{itemize}[<+-| alert@+>]
@@ -941,27 +977,27 @@ How resilient are these factors?
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Factor source 1}
-\begin{table}
-\begin{center}
-\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
-\begin{tabular}{l l l}
-\textbf{Factor} & \textbf{Risk} & \textbf{Behavr-Instit}\\
-\hline
-\textbf{Value} & Systematic risk & Expectation error\\
-      &                 & Loss aversion\\
-      &                 & Investment flows\\
-\textbf{Size}  & Systematic risk & Expectation error\\
-      & Liquidity risk   & \\
-\textbf{Momentum} & Crash risk & Over-reaction\\
-        &             & Investment flows\\
-        &             & Asynchronous trade\\
-\end{tabular}
-\end{center}
-\end{table}
-%Adapted from MSCI \emph{Foundations of Factor Investment}
-
-\end{frame}
+%\begin{frame}{Factor source 1}
+%\begin{table}
+%\begin{center}
+%\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+%\begin{tabular}{l l l}
+%\textbf{Factor} & \textbf{Risk} & \textbf{Behavr-Instit}\\
+%\hline
+%\textbf{Value} & Systematic risk & Expectation error\\
+%      &                 & Loss aversion\\
+%      &                 & Investment flows\\
+%\textbf{Size}  & Systematic risk & Expectation error\\
+%      & Liquidity risk   & \\
+%\textbf{Momentum} & Crash risk & Over-reaction\\
+%        &             & Investment flows\\
+%        &             & Asynchronous trade\\
+%\end{tabular}
+%\end{center}
+%\end{table}
+%%Adapted from MSCI \emph{Foundations of Factor Investment}
+%
+%\end{frame}
 
 \begin{frame}{Factor source 2}
 \begin{table}
@@ -1016,21 +1052,21 @@ Adapted from MSCI \emph{Foundations of Factor Investment}
 %\end{frame}
 
 \begin{frame}{Machine Learning}
-\begin{center}
-  \includegraphics[scale = 1.0]{WC}
-\end{center}
-\end{frame}
-
-\begin{frame}{Machine Learning}
-Use text analysis of Fed to predict economy
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Greenbook
-\item \emph{Tonality} to predict economy
-\item Can predict GDP and  unemployment four quarters ahead
-\item Also predicts rates and stocks
-\end{itemize}
-\end{frame}
+%\begin{center}
+%  \includegraphics[scale = 1.0]{WC}
+%\end{center}
+%\end{frame}
+%
+%\begin{frame}{Machine Learning}
+%Use text analysis of Fed to predict economy
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item Greenbook
+%\item \emph{Tonality} to predict economy
+%\item Can predict GDP and  unemployment four quarters ahead
+%\item Also predicts rates and stocks
+%\end{itemize}
+%\end{frame}
 
 \begin{frame}{ESG}
 Environmental, social and governance
@@ -1148,58 +1184,58 @@ The fund has an ethical council
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Active components of fund}
-There are a number of places where the fund must be active
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Deciding on the appropriate market
-\item Finding an investable fund
-\item Frequency of asset re-balancing
-\item Factor tilts
-\item Active security selection
-\end{itemize}
-\end{frame}
+%\begin{frame}{Active components of fund}
+%There are a number of places where the fund must be active
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item Deciding on the appropriate market
+%\item Finding an investable fund
+%\item Frequency of asset re-balancing
+%\item Factor tilts
+%\item Active security selection
+%\end{itemize}
+%\end{frame}
 
-\begin{frame}{Factors in Norwegian oil fund}
-Ang, Goetzmann and Schaefer (2009) find the following factors explain the active activity of fund
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item \textbf{Term:} yield curve 
-\item \textbf{Credit:} credit risk
-\item \textbf{FX carry:} carry-trade
-\item \textbf{Liquidity:} purchase illiquid assets
-\item \textbf{Value-growth:} long-value/short-growth
-\item \textbf{Size:} long-small cap/short-large cap
-\item \textbf{Momentum:} Buy recent winners sell recent losers
-\item \textbf{Vol:} Spread between implied and realised volatility
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Portfolio construction}
-\begin{tikzpicture} 
-%\draw[very thin, color = gray](0, 0) grid (12, 6);
-\tikzstyle{block} = [draw, rectangle, text width = 5em, 
-  text centered, minimum height = 6mm, node distance = 5em];
-\tikzstyle{line} = [draw, -stealth, thick]
-\node [block] at (1.5, 4) (one) {\scriptsize True 'market' \\ (unobserved)};
-\node [block] at (5, 4) (two) {\scriptsize Passive investable \\ benchmark};
-\node [block] at (5, 2) (twoandhalf) {\scriptsize Alternative \\ assets};
-\node [block] at (8.5, 4) (three) {\scriptsize Rebalanced \\ benchmark};
-\node [block] at (8.5, 2) (four) {\scriptsize Dynamic factor \\ allocation};
-\node [block] at (8.5, 0) (five) {\scriptsize Active \\ Portfolio};
-\path [line] (one) -- (two);
-\path [line] (two) -- (three);
-\path [line] (two) -- (twoandhalf);
-\path [line] (three) -- (four);
-\path [line] (four) -- (five);
-\node at (3, 5.5) [align = center]{\scriptsize Choice of investable \\ \scriptsize benchmark};
-\node at (6.5, 5.5) [align = center]{\scriptsize Rebalancing \\ \scriptsize gain};
-\node at (11, 3) [align = center] {\scriptsize Factor \\ \scriptsize risk premia};
-\node at (11, 1) [align = center] {\scriptsize Active \\ \scriptsize management};
-\node at (2, 0) [align = center] {\scriptsize Adapted from \\ \scriptsize Ang, Brandt, Denison (2014)};
-\end{tikzpicture}
-\end{frame} 
-
+%\begin{frame}{Factors in Norwegian oil fund}
+%Ang, Goetzmann and Schaefer (2009) find the following factors explain the active activity of fund
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item \textbf{Term:} yield curve 
+%\item \textbf{Credit:} credit risk
+%\item \textbf{FX carry:} carry-trade
+%\item \textbf{Liquidity:} purchase illiquid assets
+%\item \textbf{Value-growth:} long-value/short-growth
+%\item \textbf{Size:} long-small cap/short-large cap
+%\item \textbf{Momentum:} Buy recent winners sell recent losers
+%\item \textbf{Vol:} Spread between implied and realised volatility
+%\end{itemize}
+%\end{frame}
+%
+%\begin{frame}{Portfolio construction}
+%\begin{tikzpicture} 
+%%\draw[very thin, color = gray](0, 0) grid (12, 6);
+%\tikzstyle{block} = [draw, rectangle, text width = 5em, 
+%  text centered, minimum height = 6mm, node distance = 5em];
+%\tikzstyle{line} = [draw, -stealth, thick]
+%\node [block] at (1.5, 4) (one) {\scriptsize True 'market' \\ (unobserved)};
+%\node [block] at (5, 4) (two) {\scriptsize Passive investable \\ benchmark};
+%\node [block] at (5, 2) (twoandhalf) {\scriptsize Alternative \\ assets};
+%\node [block] at (8.5, 4) (three) {\scriptsize Rebalanced \\ benchmark};
+%\node [block] at (8.5, 2) (four) {\scriptsize Dynamic factor \\ allocation};
+%\node [block] at (8.5, 0) (five) {\scriptsize Active \\ Portfolio};
+%\path [line] (one) -- (two);
+%\path [line] (two) -- (three);
+%\path [line] (two) -- (twoandhalf);
+%\path [line] (three) -- (four);
+%\path [line] (four) -- (five);
+%\node at (3, 5.5) [align = center]{\scriptsize Choice of investable \\ \scriptsize benchmark};
+%\node at (6.5, 5.5) [align = center]{\scriptsize Rebalancing \\ \scriptsize gain};
+%\node at (11, 3) [align = center] {\scriptsize Factor \\ \scriptsize risk premia};
+%\node at (11, 1) [align = center] {\scriptsize Active \\ \scriptsize management};
+%\node at (2, 0) [align = center] {\scriptsize Adapted from \\ \scriptsize Ang, Brandt, Denison (2014)};
+%\end{tikzpicture}
+%\end{frame} 
+%
 \begin{frame}{References and further reading}
 \begin{itemize}
 \item Ang, A, W.N. Goetmann and S.M. Schaefer (2009), "Evaluation of Active Management of the Norwegian Government Pension Fund",

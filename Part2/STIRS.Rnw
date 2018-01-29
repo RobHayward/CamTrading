@@ -33,7 +33,7 @@
 % Title and author information
 \title{STIRS and interest rate expectations}
 \author{Rob Hayward}
-
+%\date{Feb 2018}
 
 \begin{document}
 
@@ -73,7 +73,7 @@ There are a number of ways that interest rate expectations can be determined
 <<money, echo=FALSE, fig.height=4.6, fig.width=6.7, cache=TRUE>>=
 da <- read.csv('../Data/Rate.csv', skip = 5)
 da$Date <- as.Date(da$Time.Period, format = "%Y-%m-%d")
-  plot(da$Date, da[,2], type = 'l', main = "US Official Interest Rate", col = 'OliveGreen', 
+  plot(da$Date, da[,2], type = 'l', main = "US Official Interest Rate", col = 'darkgreen', 
      xlab = "Year", ylab = "Rate")
 @
 \end{frame}
@@ -111,6 +111,7 @@ Dec 2018 & Z18 & 97.70& 2.30\\
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Rate expectations
+\item Kremlinology
 \item Natural levels for expectations (support and resistanc)
 \item Spreads between different months (reduces risk)
 \item Spreads between different counties (link to foreign exchange)
@@ -124,17 +125,8 @@ Dec 2018 & Z18 & 97.70& 2.30\\
 \item \href{http://timharford.com/2016/03/how-to-make-good-guesses/}{Tim Harford}
 \item \href{www.cmegroup.com/trading/interest-rates/eurodollar.html}{Latest CME Prices}
 \item \href{https://www.theice.com/products/38527986/Three-Month-Euribor-Futures}{ICE 3m Euribor}
-\item 
+\item \href{https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch12.htm}{Chapter 12: The State Of Long-Term Expectations (Keynes)} 
 \end{itemize}
 \end{frame}
-
-\begin{frame}{Open outcry}
-\begin{center}
-\includegraphics[height = 2.6in, trim = 00 20 00 20]{Open-Out-Cry.jpg}
-% trim is left, lower, right, upper
-\end{center}
-\href{https://www.youtube.com/watch?v=RLySXTIBS3c}{Trading Places}
-\end{frame}
-
 
 \end{document}
