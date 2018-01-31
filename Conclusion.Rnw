@@ -33,7 +33,7 @@
 % Title and author information
 \title{Parting thoughts}
 \author{Rob Hayward}
-
+\date{Feb 2018}
 \begin{document}
 
 \begin{frame}
@@ -59,13 +59,12 @@
 \section{Next steps}
 \section{The assignment}
 
-\begin{frame}
-The assignment
+\begin{frame}{The assignment}
 The broad choice
 \begin{itemize}[<+-| alert@+>]
 \item Interest rate expectations
 \item A technical trading rule
-\iten An Event study
+\item An Event study
 \item A Pairs trade
 \item A Portfolio Construction
 \end{itemize}
@@ -79,6 +78,8 @@ There are five \emph{flavours} of short-term speculative technique
 \item Momentum
 \item Contrarian
 \item Arbitrage
-\item Liqidity provision
+\item Liquidity provision
 \end{itemize}
 \end{frame}
+
+\end{document}

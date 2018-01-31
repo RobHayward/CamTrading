@@ -33,7 +33,7 @@
 % Title and author information
 \title{STIRS and interest rate expectations}
 \author{Rob Hayward}
-%\date{Feb 2018}
+\date{Feb 2018}
 
 \begin{document}
 

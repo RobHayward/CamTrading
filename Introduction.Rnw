@@ -58,7 +58,7 @@
 \begin{frame}{What I cannot do}
 \begin{itemize}[<+-| alert@+>]
 \item Give you a formula to print money
-\item Teach you an unfalible system
+\item Teach you an infallible system
 \item Tell you where Bitcoin will be tomorrow
 \end{itemize}
 \end{frame}

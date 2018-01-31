@@ -14,10 +14,20 @@
 \setbeamertemplate{items}[square]
 \graphicspath{{../Pictures/}}
 
+\AtBeginSection[]{
+\begin{frame}
+\vfill
+\centering
+\begin{beamercolorbox}[sep=8pt, center, shadow=true, rounded=true]{title}
+\usebeamerfont{title}\insertsectionhead\par%
+\end{beamercolorbox}
+\vfill
+\end{frame}
+}
 % Title and author information
 \title{Returns and Price Discovery}
 \author{Rob Hayward}
-
+\date{Feb 2018}
 
 \begin{document}
 
@@ -83,8 +93,9 @@ How are changes in expectations likely to affect market performance?
 \pause
 \begin{itemize}[<+-| alert@+>]
 \item What sort of position are held by short-term speculative accounts? 
-\item What sort of positions are held by long-term stable accounts (real money)? 
 \item Where are the \emph{take-profits} and \emph{stop-losses}
+\item What sort of positions are held by long-term stable accounts (real money)? 
+\item What makes them change their view?
 \end{itemize}
 \end{frame}
 
@@ -231,7 +242,7 @@ If the intrinsic value is known, buy when the market price is below intrinsic va
 \item If people are buying, they may have information about the intrinsic value
 \item Those without information may try to interpret the actions of others
 \item Disparate information can coalesce to form the price
-\item Hayek - the market as an information-processsing mechanism
+\item Hayek - the market as an information-processing mechanism
 \end{itemize}
 \end{frame}
 
@@ -275,12 +286,11 @@ There are a number of ways that interest rate expectations can be determined
 \end{frame}
 
 \section{US interest rates}
-
 \begin{frame}{US interest rates}
 <<money, echo=FALSE, fig.height=4.6, fig.width=6.7, cache=TRUE>>=
 da <- read.csv('../Data/Rate.csv', skip = 5)
 da$Date <- as.Date(da$Time.Period, format = "%Y-%m-%d")
-  plot(da$Date, da[,2], type = 'l', main = "US Official Interest Rate", col = 'OliveGreen', 
+  plot(da$Date, da[,2], type = 'l', main = "US Official Interest Rate", col = 'Darkgreen', 
      xlab = "Year", ylab = "Rate")
 @
 \end{frame}
@@ -318,7 +328,8 @@ Dec 2018 & Z18 & 97.70& 2.30\\
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Rate expectations
-\item Natural levels for expectations (support and resistanc)
+\item Kremlinology
+\item Natural levels for expectations (support and resistance)
 \item Spreads between different months (reduces risk)
 \item Spreads between different counties (link to foreign exchange)
 \end{itemize}

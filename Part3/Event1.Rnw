@@ -261,10 +261,15 @@ This will depend on \emph{the event}
 \pause
 \begin{itemize}[<+-| alert@+>]
 \item Better than expected earnings
+% if sample is small and new products or ventures are announced at the same time
 \item COE stepping down
+% is it good or bad news, is it a change of direction
 \item Times when liquidity is low
+% is this because there is fear and the fear affects price?
 \item New products
+% what date are they known?
 \item Interest rate change
+% what was expected?
 \end{itemize}
 \begin{itemize}
 \pause
