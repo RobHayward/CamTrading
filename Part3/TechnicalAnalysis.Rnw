@@ -256,6 +256,18 @@ lines(x,y, col = "DarkGreen")
 @
 \end{frame} 
 
+\begin{frame}{Current bond trendline}
+<<trend2, echo=FALSE, fig.height=4.6, message=FALSE, warning=FALSE>>=
+da2 <- read.csv('../Data/Bond.csv')
+da2[,1] <- as.Date(da2$DATE, format = '%Y-%m-%d')
+colnames(da2) <- c("Date", "Yield")
+plot(da2, type = 'l', main = "US 10-year bond yield")
+y <- c(10, 1.0)
+x <- c(6085, 20050)
+lines(x, y, col = "DarkGreen")
+@
+\end{frame}
+
 \begin{frame}{Moving average}
 A moving average will just take the average of closing prices and smooth to remove some of the noise
 \pause
