@@ -42,7 +42,7 @@
 
 \section{Introduction}
 \begin{frame}{Introduction}
-This is a return full circle to the original hedge funds
+This is the original hedge fund strategy
 \pause
 \begin{itemize}[<+-| alert@+>]
 \item Pairs and RV will hope to provide an \emph{absolute return}
@@ -74,21 +74,21 @@ The trade depends on a temporary breakdown in the correlation between two simila
 \end{frame}
 
 \begin{frame}{Pairs}
-<<Coke, echo=FALSE, cache=TRUE, fig.height=5, warning=FALSE>>=
-da <- read.csv('http://www.quandl.com/api/v1/datasets/GOOG/NYSE_KO.csv?&auth_token=mUCjthkJFQDsYVrFh4Gh&trim_start=2000-01-01&trim_end=2014-12-31&sort_order=desc', colClasses=c('Date'='Date'))
-da1 <- read.csv('http://www.quandl.com/api/v1/datasets/GOOG/NYSE_PEP.csv?&auth_token=mUCjthkJFQDsYVrFh4Gh&trim_start=2000-01-01&trim_end=2014-12-31&sort_order=desc', colClasses=c('Date'='Date'))
-da2 <- merge(da, da1, by = 'Date')
+<<Coke, echo=FALSE, fig.height=5, warning=FALSE>>=
+da1 <- read.csv('../Data/COKE.csv', colClasses=c('Date'='Date'))
+da2 <- read.csv('../Data/PEP.csv', colClasses=c('Date'='Date'))
+da <- merge(da1, da2, by = 'Date')
 par(mfrow = c(1, 2))
-plot(da2$Close.y ~ da2$Date, main = "Pepsi", xlab = "Date", ylab = "Share price", type = 'l')
-plot(da2$Close.x ~ da2$Date, main = "Coke", xlab = "Date", ylab = "Share price", type = 'l')
+plot(da$Close.y ~ da$Date, main = "Pepsi", xlab = "Date", ylab = "Share price", type = 'l')
+plot(da$Close.x ~ da$Date, main = "Coke", xlab = "Date", ylab = "Share price", type = 'l')
 @
 \end{frame}
 
 \begin{frame}{Coke vs Pepsi}
-<<Coke2, echo = FALSE, cache = TRUE, fig.height=5, warning=FALSE>>=
-plot(da2$Close.x, da2$Close.y, xlab = "Coke", ylab = "Pepsi", main = "Plot of Coke and Pepsi")
+<<Coke2, echo = FALSE, fig.height=5, warning=FALSE>>=
+plot(da$Close.x, da$Close.y, xlab = "Coke", ylab = "Pepsi", main = "Plot of Coke and Pepsi")
 par(mfrow = c(1,1))
-eq <- lm(da2$Close.y ~ da2$Close.x)
+eq <- lm(da$Close.y ~ da$Close.x)
 abline(eq, col = 'red')
 @
 \end{frame}
@@ -96,8 +96,8 @@ abline(eq, col = 'red')
 \begin{frame}{Coke vs Pepsi}
 <<CvP, echo=FALSE, fig.height=5, warning=FALSE>>=
 par(mfrow = c(1, 2))
-plot(da2$Close.x - da2$Close.y ~ da2$Date, xlab = 'Date', ylab = 'Coke - Pepsi', type = 'l')
-plot(da2$Close.x/da2$Close.y ~ da2$Date, xlab = 'Date', ylab = 'Coke/Pepsi', type = 'l')
+plot(da$Close.x - da$Close.y ~ da$Date, xlab = 'Date', ylab = 'Coke - Pepsi', type = 'l')
+plot(da$Close.x/da$Close.y ~ da$Date, xlab = 'Date', ylab = 'Coke/Pepsi', type = 'l')
 @
 \end{frame}
 
@@ -179,7 +179,7 @@ Dickey-Fuller tests  show that the null of a unit root cannot be rejected ($\tau
 \begin{frame}{The yield curve}
 <<Yield, echo = FALSE, warning=FALSE, message=FALSE, fig.height=4.6, warning=FALSE>>=
 names <- c("Date", "2-year", "10-year")
- da <- read.csv("./Data/Yield.csv", stringsAsFactors = FALSE, skip = 12, 
+ da <- read.csv("../Data/Yield.csv", stringsAsFactors = FALSE, skip = 12, 
                 na.strings = "#N/A")
  da$Date <- as.Date(da[,1], format = "%Y-%m-%d")
  da <- da[,c(4, 2, 3)]
@@ -269,12 +269,12 @@ Can this be put into a trading model?
 \begin{frame}{Oil and gas}
 <<OilGas, echo = FALSE, warning=FALSE, message=FALSE, fig.height=4.6, warning=FALSE>>=
 names <- c("Date", "Brent")
-da <- read.csv("Data/CHRIS-ICE_B1.csv")
+da <- read.csv("../Data/CHRIS-ICE_B1.csv")
 da$Date <- as.Date(da$Date, format = "%d/%m/%Y")
 da <- da[,c(1, 5)]
 names2 <- c("Date", "Gas")
 names(da) <- names
-da2 <- read.csv("Data/CHRIS-ICE_G1.csv")
+da2 <- read.csv("../Data/CHRIS-ICE_G1.csv")
 da2$Date <- as.Date(da2$Date, format = "%d/%m/%Y")
 da2 <- da2[,c(1, 5)]
 names(da2) <- names2

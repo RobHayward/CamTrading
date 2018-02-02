@@ -35,7 +35,7 @@ da$SPYR <- (da$SPY - da$SPYl)/da$SPYl
 da$TLTl <- c(rep(NA, 1), da$TLT)[1:length(da$TLT)]
 da$TLTR <- (da$TLT - da$TLTl)/da$TLTl
 da$Portl <- c(rep(NA, 1), da$portvalue)[1:length(da$portvalue)]
-da$PORTR <- (da$Portvalue - da$Portl)/da$Portl
+da$PORTR <- (da$portvalue - da$Portl)/da$Portl
 
 head(da)
 str(da)
@@ -49,13 +49,16 @@ AnnVol <- s * 250^0.5 * 100
 max <- max(x)
 min <- min(x)
 return(data.frame(N=n, AnnRet = AnnRet, AnnVol = AnnVol, Sharpe = AnnRet/AnnVol, 
-                  Max = max, Min = min))
+                  DailyMax = 100 * max, DailyMin = 100 * min))
        
 }
-a <- mystats(da$PORTR)
+a <- mystats(x = c(da$SPYR, da$TLTR, da$PORTR))
 round(a, 2)
 require(xtable)
 xtable(a)
 a
 plot(da$Date, da$SPYR, type = 'l', main = "SPY VOlatilkty", xlab = "Date", ylab = "Return")
 sd(da$SPYR, na.rm = TRUE)*250^0.5
+#===================calculate weights
+da$SPY[dim(da)[1]]*500/da$SPY[1]/da$portvalue[dim(da)[1]]*100
+da$TLT[dim(da)[1]]*500/da$TLT[1]/da$portvalue[dim(da)[1]]*100
