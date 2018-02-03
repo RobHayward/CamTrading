@@ -27,9 +27,9 @@
   \end{frame}
 }
 % Title and author information
-\title{Pairs and relative value}
+\title{Relative value and pairs}
 \author{Rob Hayward}
-
+\date{Feb 2018}
 \begin{document}
 
 \begin{frame}
@@ -41,12 +41,12 @@
 \end{frame}
 
 \section{Introduction}
-\begin{frame}{Introduction}
+\begin{frame}{Relative value}
 This is the original hedge fund strategy
 \pause
 \begin{itemize}[<+-| alert@+>]
-\item Pairs and RV will hope to provide an \emph{absolute return}
-\item Paris and RV can remove market risk and leave exposure to specific risk
+\item Relative value  will hope to provide an \emph{absolute return}
+\item Relative value can remove market risk and leave exposure to specific risk
 \item Depends upon being able to short securities
 \begin{itemize}
 \item Professional ability to borrow securities
@@ -73,7 +73,73 @@ The trade depends on a temporary breakdown in the correlation between two simila
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Pairs}
+\section{Valuing firms}
+\begin{frame}{Valuing firms}
+There are a number of methods that can be used
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Accounting methods
+\item Discounted free-cash flows
+\item Relative value and PE
+\end{itemize}
+\end{frame}
+
+%\begin{frame}{Accounting value}
+%Naive or simplistic
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item What are the value of the assets 
+%\item Book value
+%\item Re-sale value of the assets provides some lower limit to valuation
+%\end{itemize}
+%\end{frame}
+%
+%\begin{frame}{Free cash flow}
+%A more realistic view of firm value is 
+%\pause
+%\begin{block}{}
+%What does the firm do with the assets - how much money does it generate?
+%\end{block}
+%\pause
+%NPV of free cash
+%\end{frame}
+%
+\begin{frame}{Relative value}
+\begin{block}{PE ratio}
+\begin{equation*}
+\frac{P}{E} = \frac{\text{price per share}}{\text{earnings per share}}
+\end{equation*}
+\end{block}
+\end{frame}
+
+\begin{frame}{Historic PE}
+\begin{itemize}[<+-| alert@+>]
+\item Historic PE ratio of the S\&P 500 is about 14
+\begin{itemize} 
+\item Anything above this is \emph{overvalued} or \emph{A growth stock}
+\item Anything below this is \emph{undervalued} or \emph{A value stock}
+\end{itemize}
+\item Firms may be highly valued because they are strong and will be successful in the future
+\item Firms may be low valued because they are weak and will struggle
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Relative value}
+PE ratio is particularly useful for comparing firms in similar industries
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item PE says something about expected earnings' growth
+\item If the PE ratio of firms in a similar industry is different
+\begin{itemize}
+\item is it justified? 
+\item if not, they may be mis-valuation
+\end{itemize}
+\item This can allow focus on specialist knowledge
+\end{itemize}
+\end{frame}
+
+\section{Relative value trading}
+\begin{frame}{Relative value}
 <<Coke, echo=FALSE, fig.height=5, warning=FALSE>>=
 da1 <- read.csv('../Data/COKE.csv', colClasses=c('Date'='Date'))
 da2 <- read.csv('../Data/PEP.csv', colClasses=c('Date'='Date'))
@@ -96,8 +162,10 @@ abline(eq, col = 'red')
 \begin{frame}{Coke vs Pepsi}
 <<CvP, echo=FALSE, fig.height=5, warning=FALSE>>=
 par(mfrow = c(1, 2))
-plot(da$Close.x - da$Close.y ~ da$Date, xlab = 'Date', ylab = 'Coke - Pepsi', type = 'l')
-plot(da$Close.x/da$Close.y ~ da$Date, xlab = 'Date', ylab = 'Coke/Pepsi', type = 'l')
+plot(da$Close.x - da$Close.y ~ da$Date, xlab = 'Date', ylab = 'Coke - Pepsi', 
+     main = "Spread", type = 'l')
+plot(da$Close.x/da$Close.y ~ da$Date, xlab = 'Date', ylab = 'Coke/Pepsi', type = 'l', 
+     main = "Ratio")
 @
 \end{frame}
 
@@ -143,12 +211,12 @@ Where, $y_t$ is value of the first pair at time $t$; $x_t$ is the other pair at 
 \end{tabular}
 \end{table}
 
-The regression of Pepsi on Cole is only valid if the two are cointegrated.  Residuals must be checked. 
+The regression of Pepsi on Coke is only valid if the two are cointegrated.  Residuals must be checked. 
 
 \end{frame}
 
 \begin{frame}{Residuals 1}
-<<Resid1, echo=FALSE, fig.height=5, warning=FALSE>>=
+<<Resid2, echo=FALSE, fig.height=5, warning=FALSE>>=
 plot(eq$residuals ~ da$Date, main = "Plot of Residuals", xlab = 'Date', 
      ylab = 'Residual', type = 'l')
 @
@@ -176,9 +244,67 @@ $\phi_3$ & 4.18 & 8.27 & 5.34\\
 Dickey-Fuller tests  show that the null of a unit root cannot be rejected ($\tau$).  Coke and Pepsi are not cointegrated. 
 \end{frame}
 
-\begin{frame}{The yield curve}
+\begin{frame}{Relative value 2}
+<<BoA, echo=FALSE, fig.height=5, warning=FALSE>>=
+da41 <- read.csv('../Data/BAC2.csv', colClasses=c('Date'='Date'))
+da42 <- read.csv('../Data/C.csv', colClasses=c('Date'='Date'))
+da4 <- merge(da41, da42, by = 'Date')
+da4 <- subset(da4, subset = da4$Date > "2011-01-01" & da4$Date < "2017-12-31")
+par(mfrow = c(1, 2))
+plot(da4$Close.y ~ da4$Date, main = "Citi", xlab = "Date", ylab = "Share price", type = 'l')
+plot(da4$Close.x ~ da4$Date, main = "BoA", xlab = "Date", ylab = "Share price", type = 'l')
+@
+\end{frame}
+
+\begin{frame}{BoA vs Citi}
+<<BoA2, echo = FALSE, fig.height=5, warning=FALSE>>=
+plot(da4$Close.x, da4$Close.y, xlab = "BoA", ylab = "Citi", main = "Plot of BoA and Citi")
+par(mfrow = c(1,1))
+eq <- lm(da4$Close.y ~ da4$Close.x)
+abline(eq, col = 'red')
+@
+\end{frame}
+
+\begin{frame}{BoA vs Citi}
+<<CvP1, echo=FALSE, fig.height=5, warning=FALSE>>=
+par(mfrow = c(1, 2))
+plot(da4$Close.x - da4$Close.y ~ da4$Date, xlab = 'Date', ylab = 'BoA - Citi', type = 'l')
+plot(da4$Close.x/da4$Close.y ~ da4$Date, xlab = 'Date', ylab = 'BoA/Citi', type = 'l')
+@
+\end{frame}
+  
+\begin{frame}{Regression: BoA and Citi}
+% latex table generated in R 3.0.2 by xtable 1.7-1 package
+% Fri Mar 21 05:51:48 2014
+\begin{table}[ht]
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\centering
+\begin{tabular}{rrrrr}
+  \hline
+ & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept) & 20.58 & 0.68 & 30.16 & 0.00 \\ 
+  BoA & 1.37 & 0.02 & 56.18 & 0.00 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+The regression of Citi on BoA is only valid if the two are cointegrated.  Residuals must be checked. 
+
+\end{frame}
+
+\begin{frame}{Residuals 2}
+<<Resid1, echo=FALSE, fig.height=5, warning=FALSE>>=
+plot(eq$residuals ~ da4$Date, main = "Plot of Residuals", xlab = 'Date', 
+     ylab = 'Residual', type = 'l')
+text(x = as.Date("2016-01-01"), y =6.5, labels = "Tau = 2.98, Critical value = 2.58")
+lines(y = c(0, 0), x = c(as.Date("2010-01-01"), as.Date("2018-01-30")), col= "DarkGreen")
+@
+\end{frame}
+
+\begin{frame}{Relative value: the yield curve}
 <<Yield, echo = FALSE, warning=FALSE, message=FALSE, fig.height=4.6, warning=FALSE>>=
-names <- c("Date", "2-year", "10-year")
+names <- c("Date", "10-year", "2-year")
  da <- read.csv("../Data/Yield.csv", stringsAsFactors = FALSE, skip = 12, 
                 na.strings = "#N/A")
  da$Date <- as.Date(da[,1], format = "%Y-%m-%d")
@@ -193,27 +319,27 @@ names <- c("Date", "2-year", "10-year")
  @
  \end{frame}
  
-\begin{frame}{Regression 2 on 10}
-Dependent variable is 10 year
-% latex table generated in R 3.2.0 by xtable 1.7-4 package
-% Thu Feb 18 12:54:18 2016
-\begin{table}[ht]
-\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
-\centering
-\begin{tabular}{rrrrr}
-  \hline
- & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\ 
-  \hline
-(Intercept) & -0.20 & 0.01 & -13.21 & 0.00 \\ 
-  `2-year` & 0.25 & 0.01 & 43.19 & 0.00 \\ 
-   \hline
-\end{tabular}
-\end{table}
-
-The explanatory variable is 2-year.
-\end{frame}
-
-\begin{frame}{Residuals 2}
+%\begin{frame}{Regression 2 on 10}
+%Dependent variable is 10 year
+%% latex table generated in R 3.2.0 by xtable 1.7-4 package
+%% Thu Feb 18 12:54:18 2016
+%\begin{table}[ht]
+%\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+%\centering
+%\begin{tabular}{rrrrr}
+%  \hline
+% & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\ 
+%  \hline
+%(Intercept) & -0.20 & 0.01 & -13.21 & 0.00 \\ 
+%  `2-year` & 0.25 & 0.01 & 43.19 & 0.00 \\ 
+%   \hline
+%\end{tabular}
+%\end{table}
+%
+%The explanatory variable is 2-year.
+%\end{frame}
+%
+\begin{frame}{Residuals 3}
 <<resid2, echo = FALSE, warning=FALSE, message=FALSE, fig.height=4.6, warning=FALSE>>=
 eq1 <- lm(da$`10-year`  ~ da$`2-year`)
 plot(da$Date, eq1$residuals, type = 'l', xlab = "Date", 
@@ -238,33 +364,33 @@ $\phi_3$ & 3.63 & 8.27 & 5.34\\
 Dickey-Fuller tests  show that the null of a unit root is rejected ($\tau$) but that the zero restriction on the drift ($\phi_2$) and trend ($\phi_3$) cannot be rejected.   
 \end{frame}
 
-\begin{frame}{Engle-Granger ECM}
-\begin{block}{}
-\begin{equation*}
-\Delta y_t = \Phi_0 + \sum_{j=1} \Phi_j \Delta y_{t-j} + \sum_{h=1} \Phi_h \Delta x_{t-h} + \alpha \hat{u}_{t-1} + \varepsilon_t
-\end{equation*}
-\end{block}
-Where, $y_t$ is value of the first pair at time $t$; $x_t$ is the other pair at time $t$; $\Phi_j, j = 0, 1, 2 \dots$, $\Phi_h, h = 0, 1, 2 \dots$  and $\alpha$ are parameters of to be estimated; $\hat{u_t}$ are the residuals from the regression $y_t = \beta_0 + \beta_1 x_t + \varepsilon_t$
-\end{frame}
- 
-\begin{frame}{Error Correction Model}
-dependent variable is $\Delta 10Y$, $R^2  = 0.5988$
-\begin{table}[ht]
-\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
-\centering
-\begin{tabular}{lrrrr}
-  \hline
-Variable & Coefficient  & Std. Error & T-stat& Pr($>$$|$t$|$)  \\ 
-  \hline
-Intercept & 0.0018 & 0.0017 & 1.04 & 0.2974 \\ 
-$\Delta 10Y_{t-1}$ & -0.1446 & 0.0357 & -4.05 & 0.0001 \\ 
-$\Delta 2Y_{t-1}$ & 0.0826 & 0.0934 & 0.88 & 0.3764 \\ 
-$\varepsilon_{t-1}$ & -0.0238 & 0.0140 & -1.70 & 0.0903 \\ 
-   \hline
-\end{tabular}
-\end{table}
-Can this be put into a trading model?
-\end{frame}
+%\begin{frame}{Engle-Granger ECM}
+%\begin{block}{}
+%\begin{equation*}
+%\Delta y_t = \Phi_0 + \sum_{j=1} \Phi_j \Delta y_{t-j} + \sum_{h=1} \Phi_h \Delta x_{t-h} + \alpha \hat{u}_{t-1} + \varepsilon_t
+%\end{equation*}
+%\end{block}
+%Where, $y_t$ is value of the first pair at time $t$; $x_t$ is the other pair at time $t$; $\Phi_j, j = 0, 1, 2 \dots$, $\Phi_h, h = 0, 1, 2 \dots$  and $\alpha$ are parameters of to be estimated; $\hat{u_t}$ are the residuals from the regression $y_t = \beta_0 + \beta_1 x_t + \varepsilon_t$
+%\end{frame}
+% 
+%\begin{frame}{Error Correction Model}
+%dependent variable is $\Delta 10Y$, $R^2  = 0.5988$
+%\begin{table}[ht]
+%\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+%\centering
+%\begin{tabular}{lrrrr}
+%  \hline
+%Variable & Coefficient  & Std. Error & T-stat& Pr($>$$|$t$|$)  \\ 
+%  \hline
+%Intercept & 0.0018 & 0.0017 & 1.04 & 0.2974 \\ 
+%$\Delta 10Y_{t-1}$ & -0.1446 & 0.0357 & -4.05 & 0.0001 \\ 
+%$\Delta 2Y_{t-1}$ & 0.0826 & 0.0934 & 0.88 & 0.3764 \\ 
+%$\varepsilon_{t-1}$ & -0.0238 & 0.0140 & -1.70 & 0.0903 \\ 
+%   \hline
+%\end{tabular}
+%\end{table}
+%Can this be put into a trading model?
+%\end{frame}
 
 \begin{frame}{Oil and gas}
 <<OilGas, echo = FALSE, warning=FALSE, message=FALSE, fig.height=4.6, warning=FALSE>>=
@@ -339,7 +465,7 @@ abline(h = -4, col = 'Green', lty = 2, lwd = 2)
 @
 \end{frame}
 
-\section{Breakouts}
+\section{Pairs trading: breakouts}
 \begin{frame}{Relative value}
 Now the focus is on one part of the pair out-performing
 This can be based on, for example
@@ -350,6 +476,7 @@ This can be based on, for example
 \item Products and brands
 \item Country risk
 \item Yield curve, duration and changes in short-term interest rates
+\item Other fundamental factors
 \end{itemize}
 \end{frame}
 
@@ -359,7 +486,8 @@ Look for a pair of securities, commodities, exchange rates that you believe will
 \pause
 \item Carry out an fundamental investigation of the value of the two to determine whether \emph{convergence} or \emph{breakout} is most likely
 \item Present the (ratio or difference) range for a pair.  Calculate an absolute range and a range based on moving average and standard deviations
-\item Carry out the Engle-Granger cointegration technique
+\item Apply some technical analysis to the measure of their relationship
+\item Apply a regression and check the residuals - are there different regimes? 
 \end{itemize}
 \end{frame}
 

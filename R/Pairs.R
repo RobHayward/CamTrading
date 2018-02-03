@@ -7,3 +7,35 @@ plot(da$Close.y ~ da2$Date, main = "Pepsi", xlab = "Date", ylab = "Share price",
 plot(da$Close.x ~ da2$Date, main = "Coke", xlab = "Date", ylab = "Share price", type = 'l')
 head(da)
 tail(da)
+#-----------------test for similar firms
+da1 <- read.csv('./Data/BAC2.csv', colClasses=c('Date'='Date'))
+da2 <- read.csv('./Data/C.csv', colClasses=c('Date'='Date'))
+da <- merge(da1, da2, by = 'Date')
+da <- subset(da, subset = da$Date > "2011-01-01" & da$Date < "2017-12-31")
+par(mfrow = c(1, 2))
+plot(da$Close.x ~ da$Date, main = "BAC", xlab = "Date", ylab = "Share price", type = 'l')
+plot(da$Close.y ~ da$Date, main = "Citi", xlab = "Date", ylab = "Share price", type = 'l')
+plot(da$Close.x/da$Close.y ~ da$Date, main = "Ratio", xlab = "Date", ylab = "Share price", 
+    type = 'l')
+plot(da$Close.x - da$Close.y ~ da$Date, main = "Spread", xlab = "Date", ylab = 
+       "Share price", type = 'l')
+eq1 <- lm(da$Close.x ~ da$Close.y)
+par(mfrow = c(1,1))
+plot(da$Date, resid(eq1), type = 'l', main = "Residual from regression", ylab = "Residuals",
+     xlab = "Date")
+head(da)
+tail(da)
+install.packages('urca')
+require('urca')
+#=======this is a test with the Denmark data
+data(denmark)
+income <- ts(denmark$LRY)
+summary(ur.df(income, type = "trend"))
+  summary(ur.df(resid(eq1), type = "drift"))
+x <- c(1,10)
+y <- c(1,10)
+text(x = as.Date("2013-01-01"), y = 4, labels = "Tau = 2.98, Critical value = 2.58")
+lines(y = c(0, 0), x = c(as.Date("2010-01-01"), as.Date("2018-01-30")), col= "DarkGreen")
+
+class(da$Date)
+head(da$Date)
