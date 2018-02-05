@@ -205,7 +205,7 @@ A \emph{bootstrap} will sample from the sample to get an idea of the sampling di
 
 \begin{frame}{Example}
 \begin{figure}
-\includegraphics[scale=0.45]{EventExample}
+\includegraphics[scale=0.45]{EventExamples}
 \end{figure}
 \end{frame}
 \end{document}

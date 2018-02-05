@@ -40,8 +40,15 @@
 \end{frame}
 
 \section{Introduction}
+\begin{frame}{Information}
+\frametitle{Information}
+\begin{center}
+\includegraphics[height = 3.0in]{TradingScreen}
+\end{center}
+\end{frame}
+
 \begin{frame}{Expectations}
-However, expectations are formed, 
+Expectations and their formation are the key to market moves
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Financial markets are moved by \emph{surprises}
@@ -52,7 +59,7 @@ However, expectations are formed,
 \end{frame}
 
 \begin{frame}{What is expected?}
-This is a bigger problem than would be anticipated
+It is essential to know what is expected
 \pause
 \begin{block}{}
 \textbf{Problem}\\
@@ -207,8 +214,6 @@ The Efficient Market Hypothesis (EMH) says that a weighted average of the interp
 \begin{frame}{Price Discovery}
 How does the information get into the price? 
 \pause
-
-
 Kyle (1985) - \emph{Continuous Auctions and Insider Trading} \emph{Econometrica} \textbf{53b(6)}
 \pause
 \begin{itemize}[<+-| alert@+>]
@@ -232,8 +237,6 @@ Kyle (1985) - \emph{Continuous Auctions and Insider Trading} \emph{Econometrica}
 %A. Persuad identified \emph{`Liquidity Black Holes'} in State Street Global Insight.  This emphasises the importance of diversity of opinion otherwise there is a risk that 'positive feedback is created
 %\end{frame}
 
-
-\section{Intrinsic Value}
 \begin{frame}{Intrinsic Value and Market Price}
 If the intrinsic value is known, buy when the market price is below intrinsic value and sell when it is above
 \pause
@@ -265,97 +268,6 @@ American Economic Review 1980 \textbf{80}
 \item There is equilibrium where the cost of acquiring information is equal to the return from using that information. 
 \item This supports the idea there is a spectrum of relatively more or less efficient markets
 \end{itemize}
-\end{frame}
-
-\begin{frame}{Information}
-\frametitle{Information}
-\begin{center}
-\includegraphics[height = 3.0in]{TradingScreen}
-\end{center}
-\end{frame}
-
-\section{Interest rate expectations}
-\begin{frame}{Interest rate expectations}
-There are a number of ways that interest rate expectations can be determined 
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item A poll of people (economists?)
-\item Short-term interest rate futures (STIRS)
-\item Implied forward rates
-\end{itemize}
-\end{frame}
-
-\section{US interest rates}
-\begin{frame}{US interest rates}
-<<money, echo=FALSE, fig.height=4.6, fig.width=6.7, cache=TRUE>>=
-da <- read.csv('../Data/Rate.csv', skip = 5)
-da$Date <- as.Date(da$Time.Period, format = "%Y-%m-%d")
-  plot(da$Date, da[,2], type = 'l', main = "US Official Interest Rate", col = 'Darkgreen', 
-     xlab = "Year", ylab = "Rate")
-@
-\end{frame}
-
-\section{Specifications}
-\begin{frame}{CME Eurodollar}
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Unit of trading: \$1000000
-\item Delivery: Mar, Jun, Sep and Dec. 
-\item Quotation: 100 minus rate of interest
-\item Minimum price fluctuation: 0.005 (0.0025 first month)
-\item $ \$1000000 \times 0.05/100 \times 0.25 = \$12.50$
-\item Last trading day: 10.00 two business days prior to the third Wednesday of the delivery month
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Specification}
-\begin{center}
-\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
-\begin{tabular}{llll}
-Contract & Code & Price & Value\\
-\hline
-Mar 2018 & H18 & 98.155& 1.845\\
-Jun 2018 & M18 & 97.955 & 2.045\\ 
-Sep 2018 & U18 & 97.82 &2.18\\
-Dec 2018 & Z18 & 97.70& 2.30\\
-\hline
-\end{tabular}
-\end{center}
-\href{www.cmegroup.com/trading/interest-rates/eurodollar.html}{Latest CME Prices}
-\end{frame}
-
-\begin{frame}{Trading opportunities}
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Rate expectations
-\item Kremlinology
-\item Natural levels for expectations (support and resistance)
-\item Spreads between different months (reduces risk)
-\item Spreads between different counties (link to foreign exchange)
-\end{itemize}
-\end{frame}
-
-\section{Further reading}
-\begin{frame}{Further reading}
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item \href{http://timharford.com/2016/03/how-to-make-good-guesses/}{Tim Harford}
-\item \href{www.cmegroup.com/trading/interest-rates/eurodollar.html}{Latest CME Prices}
-\item \href{https://www.theice.com/products/38527986/Three-Month-Euribor-Futures}{ICE 3m Euribor}
-\item 
-\end{itemize}
-\end{frame}
-\begin{frame}{For the assignment}
-Either
-\pause
-\begin{itemize}[<+-| alert@+>]
-\item Create a diversified portfolio with minimal cost and risk
-\item Find an inefficiency
-\end{itemize}
-\pause
-\begin{block}{}
-Excess return must be more than just a compensation for taking risk
-\end{block}
 \end{frame}
 
 \begin{frame}{Efficient reaction to information}
@@ -402,6 +314,79 @@ z4 <- matrix(c(0, 4, 0, 7, 2, 4), ncol = 2, byrow = TRUE)
 lines(z4, lty = 2)
 text(2.4, 6, "Overshooting")
 @
+\end{frame}
+
+\section{Interest rate expectations}
+\begin{frame}{Interest rate expectations}
+There are a number of ways that interest rate expectations can be determined 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item A poll of people (economists?)
+\item Short-term interest rate futures (STIRS)
+\item Implied forward rates
+\end{itemize}
+\end{frame}
+
+\begin{frame}{US interest rates}
+<<money, echo=FALSE, fig.height=4.6, fig.width=6.7, cache=TRUE>>=
+da <- read.csv('../Data/Rate.csv', skip = 5)
+da$Date <- as.Date(da$Time.Period, format = "%Y-%m-%d")
+  plot(da$Date, da[,2], type = 'l', main = "US Official Interest Rate", col = 'Darkgreen', 
+     xlab = "Year", ylab = "Rate")
+@
+\end{frame}
+
+\section{STIRS}
+\begin{frame}{CME Eurodollar}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Unit of trading: \$1000000
+\item Delivery: Mar, Jun, Sep and Dec. 
+\item Quotation: 100 minus rate of interest
+\item Minimum price fluctuation: 0.005 (0.0025 first month)
+\item $ \$1000000 \times 0.05/100 \times 0.25 = \$12.50$
+\item Last trading day: 10.00 two business days prior to the third Wednesday of the delivery month
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Specification}
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{llll}
+Contract & Code & Price & Value\\
+\hline
+Mar 2018 & H18 & 98.155& 1.845\\
+Jun 2018 & M18 & 97.955 & 2.045\\ 
+Sep 2018 & U18 & 97.82 &2.18\\
+Dec 2018 & Z18 & 97.70& 2.30\\
+\hline
+\end{tabular}
+\end{center}
+\href{www.cmegroup.com/trading/interest-rates/eurodollar.html}{Latest CME Prices}
+\end{frame}
+
+\begin{frame}{Trading}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Rate expectations
+\item Kremlinology
+\item Natural levels for expectations (support and resistance)
+\item Spreads between different months (reduces risk)
+\item Spreads between different counties (link to foreign exchange)
+\end{itemize}
+\end{frame}
+
+
+\section{Additional resources}
+\begin{frame}{Further reading}
+\begin{itemize}[<+-| alert@+>]
+\pause
+
+\item \href{www.cmegroup.com/trading/interest-rates/eurodollar.html}{Latest CME Prices}
+\item \href{https://www.theice.com/products/38527986/Three-Month-Euribor-Futures}{ICE 3m Euribor}
+\item \href{https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch12.htm}{Chapter 12: The State Of Long-Term Expectations (Keynes)} 
+\\item 
+\end{itemize}
 \end{frame}
 
 

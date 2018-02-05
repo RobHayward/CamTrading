@@ -217,7 +217,7 @@ There is a lot of information beside the event that is to be studied
 \pause
 \begin{itemize}[<+-| alert@+>]
 \item We assume that this information is a \emph{random variable}
-\item We assume that this  other informtion is neutral on average
+\item We assume that this  other information is neutral on average
 \item The larger the sample, the closer the sample mean of this other information is to the actual mean (zero)
 \end{itemize}
 \end{frame}

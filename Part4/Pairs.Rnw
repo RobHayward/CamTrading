@@ -491,6 +491,19 @@ Look for a pair of securities, commodities, exchange rates that you believe will
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Short-term speculative techniques}
+There are five \emph{flavours} of short-term speculative technique
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Carry-trade
+\item Momentum
+\item Contrarian
+\item Arbitrage
+\item Liquidity provision
+\end{itemize}
+\end{frame}
+
+
 \end{document}
 
 \begin{frame}{Yield curve predicts economy}

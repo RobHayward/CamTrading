@@ -4,7 +4,7 @@
 \usetheme{Madrid}
 % See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
 \usepackage{caption}
-\usepackage{listing}
+%\usepackage{listing}
 \usepackage{amsmath}
 \usepackage{tikz}
 \usepackage{caption}
@@ -30,6 +30,7 @@
 % Title and author information
 \title{Behavioural Finance}
 \author{Rob Hayward}
+\date{Feb 2018}
 
 \begin{document}
 
@@ -396,24 +397,13 @@ However, noise-trader risk may limit arbitrage
 \end{itemize}
 \end{frame}
 
-\begin{frame}{The Assignment}
-For the assignment
+\section{Further reading}
+\begin{frame}{Further reading}
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item Look for example of gradual reaction to news
-\begin{itemize}
-\item This can be a more active portfolio
-\item Find information (earnings reports) and build portfolio on that: one for better than expected results; one for worse than expected
-\end{itemize}
-\item Look for over-shooting
-\begin{itemize}
-\item PE ratio, P-book ratio, others....
-\end{itemize}
-\item Use technical analysis
+\item \href{http://timharford.com/2016/03/how-to-make-good-guesses/}{Tim Harford}
+\item \href{http://www.independent.co.uk/news/obituaries/tony-dye-controversial-fund-manager-796811.html}{Tony Dye}
 \end{itemize}
 \end{frame}
 
 \end{document}
-
-
-  
