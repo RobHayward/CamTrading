@@ -306,7 +306,7 @@ Bad & 6 (1/2) &
 \begin{itemize}
 \item Stocks vs bonds
 \item Umbrella and ice cream
-\item Value good, Liddle, public transport
+\item Inferior goods, Liddle, public transport
 \item Negative income elasticity
 \end{itemize}
 \end{itemize}
@@ -484,7 +484,7 @@ A number of additional risk factors have been found
 \section{Passive vs active investment}
 \begin{frame}{Economist and the one hundred dollar bill}
 \begin{center}
-\includegraphics[scale = 0.05]{oneHundredDollar}
+\includegraphics[scale = 0.5]{oneHundredDollar}
 \end{center}
 \end{frame}
 

@@ -345,7 +345,7 @@ If sentiment is becoming less positive, there is a risk that it can suddenly rev
 \end{itemize}
 \end{itemize}
 \pause
-Technical trading handbook - student central
+Technical trading handbook 
 \end{frame}
 
 \begin{frame}{Other indicators}
@@ -411,9 +411,6 @@ RS = \frac{\text{Average of last 14 positive closes}}{\text{Average of last 14 n
 \item Explain the inefficiency that the rule is supposed to capture 
 \item Test the trading rule on a real market
 \item Assess the use of the trading rule
-\begin{itemize}
-\item You will have to return to the first assignment
-\end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -427,4 +424,14 @@ Three themes
 \end{itemize}
 \end{frame}
 
+\section{Additional resources}
+\begin{frame}{Additional resources}
+\begin{itemize}[<+-| alert@+>]
+\item \href{https://www.quandl.com/blog/interview-with-a-quant-part-oneyf}{Interview with quant 1}
+\item \href{https://www.quandl.com/blog/interview-with-a-quant-part-two}{Interview with quant 2}
+\item \href{https://blog.quandl.com/interview-with-a-quant-part-three}{Interview with quant 3}
+\end{itemize}
+\end{frame}
+
 \end{document}
+

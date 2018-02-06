@@ -397,8 +397,8 @@ However, noise-trader risk may limit arbitrage
 \end{itemize}
 \end{frame}
 
-\section{Further reading}
-\begin{frame}{Further reading}
+\section{Additional resources}
+\begin{frame}{Additional resources}
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item \href{http://timharford.com/2016/03/how-to-make-good-guesses/}{Tim Harford}

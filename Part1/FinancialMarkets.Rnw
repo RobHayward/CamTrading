@@ -126,6 +126,7 @@ A. Persuad identified \emph{`Liquidity Black Holes'} in State Street Global Insi
 \begin{frame}{Margin}
 Margin means that you do not have to put up all the money immediately
 \begin{block}{}
+\pause
 \begin{itemize}
 \item if margin requirement is 50\%
 \item you can buy \$2 million stock with your \$1 million
@@ -167,6 +168,7 @@ The exchanges are public companies
 \end{itemize}
 \end{frame}
 
+\section{Institutions}
 \begin{frame}{Banks and credit}
 Banks are not an important part of the story but...
 \begin{itemize}[<+-| alert@+>]

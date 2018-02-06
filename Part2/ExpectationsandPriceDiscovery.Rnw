@@ -25,7 +25,7 @@
 \end{frame}
 }
 % Title and author information
-\title{Returns and Price Discovery}
+\title{Expectations and Price Discovery}
 \author{Rob Hayward}
 \date{Feb 2018}
 
@@ -47,17 +47,6 @@
 \end{center}
 \end{frame}
 
-\begin{frame}{Expectations}
-Expectations and their formation are the key to market moves
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Financial markets are moved by \emph{surprises}
-\item This makes it imperative to know what is embedded in the current market price
-\item There is some sort of distribution of expectations with a range and an expected (mean) value
-\item Shackle and \emph{Kalediostatics} 
-\end{itemize}
-\end{frame}
-
 \begin{frame}{What is expected?}
 It is essential to know what is expected
 \pause
@@ -70,6 +59,17 @@ Radio:``BP shares rose $10\%$ despite the company losing $\$10mn$ in the first h
 \textbf{Answer}\\
 They were expected to lose $\$15mn$
 \end{block}
+\end{frame}
+
+\begin{frame}{Expectations}
+Expectations and their formation are the key to market moves
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Financial markets are moved by \emph{surprises}
+\item This makes it imperative to know what is embedded in the current market price
+\item There is some sort of distribution of expectations with a range and an expected (mean) value
+\item Shackle and \emph{Kaleidostatics} 
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Assessing expectations}
@@ -344,7 +344,7 @@ da$Date <- as.Date(da$Time.Period, format = "%Y-%m-%d")
 \item Delivery: Mar, Jun, Sep and Dec. 
 \item Quotation: 100 minus rate of interest
 \item Minimum price fluctuation: 0.005 (0.0025 first month)
-\item $ \$1000000 \times 0.05/100 \times 0.25 = \$12.50$
+\item $ \$1000000 \times 0.005/100 \times 0.25 = \$12.50$
 \item Last trading day: 10.00 two business days prior to the third Wednesday of the delivery month
 \end{itemize}
 \end{frame}
@@ -355,10 +355,14 @@ da$Date <- as.Date(da$Time.Period, format = "%Y-%m-%d")
 \begin{tabular}{llll}
 Contract & Code & Price & Value\\
 \hline
-Mar 2018 & H18 & 98.155& 1.845\\
-Jun 2018 & M18 & 97.955 & 2.045\\ 
-Sep 2018 & U18 & 97.82 &2.18\\
-Dec 2018 & Z18 & 97.70& 2.30\\
+Mar 2018 & H18 & 98.125& 1.875\\
+Jun 2018 & M18 & 97.925 & 2.075\\ 
+Sep 2018 & U18 & 97.805 &2.195\\
+Dec 2018 & Z18 & 97.685& 2.315\\
+Mar 2019 & H19 & 97.61 & 2.39\\
+Jun 2019 & M19 & 97.52 & 2.48\\
+Sep 2019 & U19 & 97.46 & 2.54\\
+Dec 2019 & Z19 & 97.39 & 2.61\\
 \hline
 \end{tabular}
 \end{center}
@@ -378,14 +382,16 @@ Dec 2018 & Z18 & 97.70& 2.30\\
 
 
 \section{Additional resources}
-\begin{frame}{Further reading}
+\begin{frame}{Additional resources}
 \begin{itemize}[<+-| alert@+>]
 \pause
 
 \item \href{www.cmegroup.com/trading/interest-rates/eurodollar.html}{Latest CME Prices}
 \item \href{https://www.theice.com/products/38527986/Three-Month-Euribor-Futures}{ICE 3m Euribor}
+\item \href{https://www.theice.com/products/37650330/Three-Month-Sterling-Short-Sterling-Future/data}{ICE Short-sterling}
 \item \href{https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch12.htm}{Chapter 12: The State Of Long-Term Expectations (Keynes)} 
-\\item 
+\item \href{https://www.federalreserve.gov/}{Board of the Federal Reserve}
+\item \href{https://sffed-education.org/chairthefed/}{Fed game}
 \end{itemize}
 \end{frame}
 

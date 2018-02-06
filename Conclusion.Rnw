@@ -48,19 +48,19 @@
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Can we achieve returns that are more than just compensation for taking risk? 
-\item Why
+\item If \emph{Yes}, ... why?
 \begin{itemize}
 \item where is the inefficiency?
 \item is it institutional or behavioural?
 \end{itemize}
 \item Otherwise, we may be getting a return for taking risk
 \begin{itemize}
-\item we should at least be away of the risk
+\item we should at least be aware of the risk
 \end{itemize}
 
 \end{itemize}
 \end{frame}
-\section{Next steps}
+
 \section{The assignment}
 
 \begin{frame}{The assignment}
@@ -70,6 +70,7 @@ The options:
 \item Interest rate expectations
 \item A technical trading rule
 \item An Event study
+\item Relative value
 \item A Pairs trade
 \item A Portfolio Construction
 \end{itemize}
@@ -84,6 +85,16 @@ There are five \emph{flavours} of short-term speculative technique
 \item Contrarian
 \item Arbitrage
 \item Liquidity provision
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Long-term investment ideas}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Value investment
+\item Mixture of ETFs
+\item Venture-capital/start-up
+\item Environmental, Social and Governance indicators
 \end{itemize}
 \end{frame}
 

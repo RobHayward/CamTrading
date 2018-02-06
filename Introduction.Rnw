@@ -103,26 +103,16 @@ There are a number of decisions that I have made to simplify:
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Can we achieve returns that are more than just compensation for taking risk? 
-\item Why
+\item If \emph{Yes}, ... why?
 \begin{itemize}
 \item where is the inefficiency?
 \item is it institutional or behavioural?
 \end{itemize}
 \item Otherwise, we may be getting a return for taking risk
 \begin{itemize}
-\item we should at least be away of the risk
+\item we should at least be aware of the risk
 \end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Further reading}
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item \href{https://finance.yahoo.com/}{Yahoo Finance}
-\item \href{https://www.google.com}{Google Finance}
-\item \href{https://www.ig.com}{IG Index}
-\item \href{https://financial.thomsonreuters.com/en/products/trading-capabilities/foreign-exchange-markets/fxall-electronic-trading-platform.html}{FXall}
-\item \href{https://www.quandl.com}{Quandl}
-\end{itemize}
-\end{frame}
 \end{document}
