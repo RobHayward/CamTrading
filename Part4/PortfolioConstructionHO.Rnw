@@ -1,4 +1,4 @@
-\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
 
 % Specify theme
 \usetheme{Madrid}
@@ -908,7 +908,7 @@ plot(da$Date, da$rebasePort, type = 'l', xlab = "Date", ylab = "Re-based Value",
 lines(da$Date, da$rebasetlt, col = 'DarkGreen')
 lines(da$Date, da$rebasespy, col = 'Brown')
 legend('topleft', c('Portfolio', 'SPY', 'TLT'), lty = 1, 
-       col = c("Black", "Brown","DarkGreen" ))
+       col = c("Black",  "Brown", "DarkGreen"))
 @
 \end{frame}
 

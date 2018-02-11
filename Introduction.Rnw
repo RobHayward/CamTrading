@@ -31,7 +31,7 @@
 }
 
 % Title and author information
-\title{Introduction}
+\title{Financial Markets Analysis and Trading}
 \author{Rob Hayward}
 \date{Feb 2018}
 \begin{document}
@@ -113,6 +113,12 @@ There are a number of decisions that I have made to simplify:
 \item we should at least be aware of the risk
 \end{itemize}
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Assignment}
+\begin{block}{}
+Make an investment recommendation.  This can be any time frame and any asset.  The report should explain any market inefficiency and provide empirical evidence to support the case.
+\end{block}
 \end{frame}
 
 \end{document}

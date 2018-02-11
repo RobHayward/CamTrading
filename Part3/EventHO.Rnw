@@ -1,4 +1,4 @@
-\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table, handout]{beamer}
 
 % Specify theme
 \usetheme{Madrid}
@@ -365,7 +365,7 @@ The sampling distribution of the mean is given by
 \pause
 \begin{block}{}
 \begin{equation*}
-\sigma_{\bar{x}} = l \times \frac{\hat{\sigma}}{\sqrt{n}}
+\sigma_{\bar{x}} = \frac{\hat{\sigma}}{\sqrt{l*n}}
 \end{equation*}
 \end{block}
 \pause
