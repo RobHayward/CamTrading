@@ -66,75 +66,11 @@ The trade depends on a temporary breakdown in the correlation between two simila
 \begin{itemize}
 \item Tesco and Sainsbury
 \item Coke and Pepsi
+\item Bank of America and Citibank
 \item 5-year bond and 10-year bond
 \item Gold and silver
 \item Oil and products
 \end{itemize}
-\end{itemize}
-\end{frame}
-
-\section{Valuing firms}
-\begin{frame}{Valuing firms}
-There are a number of methods that can be used
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Accounting methods
-\item Discounted free-cash flows
-\item Relative value and PE
-\end{itemize}
-\end{frame}
-
-%\begin{frame}{Accounting value}
-%Naive or simplistic
-%\begin{itemize}[<+-| alert@+>]
-%\pause
-%\item What are the value of the assets 
-%\item Book value
-%\item Re-sale value of the assets provides some lower limit to valuation
-%\end{itemize}
-%\end{frame}
-%
-%\begin{frame}{Free cash flow}
-%A more realistic view of firm value is 
-%\pause
-%\begin{block}{}
-%What does the firm do with the assets - how much money does it generate?
-%\end{block}
-%\pause
-%NPV of free cash
-%\end{frame}
-%
-\begin{frame}{Relative value}
-\begin{block}{PE ratio}
-\begin{equation*}
-\frac{P}{E} = \frac{\text{price per share}}{\text{earnings per share}}
-\end{equation*}
-\end{block}
-\end{frame}
-
-\begin{frame}{Historic PE}
-\begin{itemize}[<+-| alert@+>]
-\item Historic PE ratio of the S\&P 500 is about 14
-\begin{itemize} 
-\item Anything above this is \emph{overvalued} or \emph{A growth stock}
-\item Anything below this is \emph{undervalued} or \emph{A value stock}
-\end{itemize}
-\item Firms may be highly valued because they are strong and will be successful in the future
-\item Firms may be low valued because they are weak and will struggle
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Relative value}
-PE ratio is particularly useful for comparing firms in similar industries
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item PE says something about expected earnings' growth
-\item If the PE ratio of firms in a similar industry is different
-\begin{itemize}
-\item is it justified? 
-\item if not, they may be mis-valuation
-\end{itemize}
-\item This can allow focus on specialist knowledge
 \end{itemize}
 \end{frame}
 
@@ -466,7 +402,7 @@ abline(h = -4, col = 'Green', lty = 2, lwd = 2)
 \end{frame}
 
 \section{Pairs trading: breakouts}
-\begin{frame}{Relative value}
+\begin{frame}{Pairs trading}
 Now the focus is on one part of the pair out-performing
 This can be based on, for example
 \pause
@@ -480,6 +416,71 @@ This can be based on, for example
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Valuing firms}
+There are a number of methods that can be used
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Accounting methods
+\item Discounted free-cash flows
+\item Relative value and PE
+\end{itemize}
+\end{frame}
+
+%\begin{frame}{Accounting value}
+%Naive or simplistic
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item What are the value of the assets 
+%\item Book value
+%\item Re-sale value of the assets provides some lower limit to valuation
+%\end{itemize}
+%\end{frame}
+%
+%\begin{frame}{Free cash flow}
+%A more realistic view of firm value is 
+%\pause
+%\begin{block}{}
+%What does the firm do with the assets - how much money does it generate?
+%\end{block}
+%\pause
+%NPV of free cash
+%\end{frame}
+%
+\begin{frame}{Relative value}
+\begin{block}{PE ratio}
+\begin{equation*}
+\frac{P}{E} = \frac{\text{price per share}}{\text{earnings per share}}
+\end{equation*}
+\end{block}
+\end{frame}
+
+\begin{frame}{Historic PE}
+\begin{itemize}[<+-| alert@+>]
+\item Historic PE ratio of the S\&P 500 is about 14
+\begin{itemize} 
+\item Anything above this is \emph{overvalued} or \emph{A growth stock}
+\item Anything below this is \emph{undervalued} or \emph{A value stock}
+\end{itemize}
+\item Firms may be highly valued because they are strong and will be successful in the future
+\item Firms may be low valued because they are weak and will struggle
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Relative value}
+PE ratio is particularly useful for comparing firms in similar industries
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item PE says something about expected earnings' growth
+\item If the PE ratio of firms in a similar industry is different
+\begin{itemize}
+\item is it justified? 
+\item if not, they may be mis-valuation
+\end{itemize}
+\item This can allow focus on specialist knowledge
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}{For you}
 Look for a pair of securities, commodities, exchange rates that you believe will be stable or will diverge.  Complete one of the following
 \begin{itemize}[<+-| alert@+>]
@@ -487,21 +488,21 @@ Look for a pair of securities, commodities, exchange rates that you believe will
 \item Carry out an fundamental investigation of the value of the two to determine whether \emph{convergence} or \emph{breakout} is most likely
 \item Present the (ratio or difference) range for a pair.  Calculate an absolute range and a range based on moving average and standard deviations
 \item Apply some technical analysis to the measure of their relationship
-\item Apply a regression and check the residuals - are there different regimes? 
+\item Apply the Error-Correction model
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Short-term speculative techniques}
-There are five \emph{flavours} of short-term speculative technique
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Carry-trade
-\item Momentum
-\item Contrarian
-\item Arbitrage
-\item Liquidity provision
-\end{itemize}
-\end{frame}
+%\begin{frame}{Short-term speculative techniques}
+%There are five \emph{flavours} of short-term speculative technique
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item Carry-trade
+%\item Momentum
+%\item Contrarian
+%\item Arbitrage
+%\item Liquidity provision
+%\end{itemize}
+%\end{frame}
 
 
 \end{document}
