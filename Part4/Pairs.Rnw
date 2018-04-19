@@ -27,7 +27,7 @@
   \end{frame}
 }
 % Title and author information
-\title{Relative value and pairs}
+\title{Pairs and Relative value}
 \author{Rob Hayward}
 \date{Feb 2018}
 \begin{document}
@@ -41,19 +41,6 @@
 \end{frame}
 
 \section{Introduction}
-\begin{frame}{Relative value}
-This is the original hedge fund strategy
-\pause
-\begin{itemize}[<+-| alert@+>]
-\item Relative value  will hope to provide an \emph{absolute return}
-\item Relative value can remove market risk and leave exposure to specific risk
-\item Depends upon being able to short securities
-\begin{itemize}
-\item Professional ability to borrow securities
-\item Use futures or contract-for-difference
-\end{itemize}
-\end{itemize}
-\end{frame}
 
 \section{Convergence}
 \begin{frame}{Convergence}
@@ -467,6 +454,20 @@ There are a number of methods that can be used
 \end{frame}
 
 \begin{frame}{Relative value}
+This is the original hedge fund strategy
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Relative value  will hope to provide an \emph{absolute return}
+\item Relative value can remove market risk and leave exposure to specific risk
+\item Depends upon being able to short securities
+\begin{itemize}
+\item Professional ability to borrow securities
+\item Use futures or contract-for-difference
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Relative value}
 PE ratio is particularly useful for comparing firms in similar industries
 \begin{itemize}[<+-| alert@+>]
 \pause
@@ -479,7 +480,6 @@ PE ratio is particularly useful for comparing firms in similar industries
 \item This can allow focus on specialist knowledge
 \end{itemize}
 \end{frame}
-
 
 \begin{frame}{For you}
 Look for a pair of securities, commodities, exchange rates that you believe will be stable or will diverge.  Complete one of the following
