@@ -27,7 +27,7 @@
 % Title and author information
 \title{Expectations and Price Discovery}
 \author{Rob Hayward}
-\date{Feb 2018}
+\date{Feb 2019}
 
 \begin{document}
 
@@ -50,6 +50,7 @@
 \begin{frame}{What is expected?}
 It is essential to know what is expected
 \pause
+\includegraphics{bp}
 \begin{block}{}
 \textbf{Problem}\\
 Radio:``BP shares rose $10\%$ despite the company losing $\$10mn$ in the first half of the year"
@@ -57,7 +58,7 @@ Radio:``BP shares rose $10\%$ despite the company losing $\$10mn$ in the first h
 \pause
 \begin{block}{}
 \textbf{Answer}\\
-They were expected to lose $\$15mn$
+The expected loss was $\$15mn$
 \end{block}
 \end{frame}
 
@@ -67,8 +68,10 @@ Expectations and their formation are the key to market moves
 \pause
 \item Financial markets are moved by \emph{surprises}
 \item This makes it imperative to know what is embedded in the current market price
-\item There is some sort of distribution of expectations with a range and an expected (mean) value
-\item Shackle and \emph{Kaleidostatics} 
+\item In many cases that is not easy: there are opinions and some of them have been realised in investor behaviour
+\item The price will \emph{crystalise} a range of different views
+%\item GLS Shackle and \emph{Kaleidostatics} 
+\item \href{https://tradingeconomics.com/calendar}{The business of expectations}
 \end{itemize}
 \end{frame}
 
@@ -79,20 +82,31 @@ Expectations and their formation are the key to market moves
 \item The price is some sort of \emph{weighted average} of these expectations
 \begin{itemize}
 \item Weighted by intensity of belief
-\item Weighted by money
+\item More likely, weighted by money
 \end{itemize}
 \item It is not necessarily normally distributed
 \end{itemize}
 \end{frame}
 
 \begin{frame}{The distribution of expectations}
-For example
-\pause
-\begin{itemize}[<+-| alert@+>]
-\item \textbf{Positive skew} most people have a consensus belief but there are some extremely positive views
-\item \textbf{Negative skew} most people have a consensus belief that there are some extremely negative views
-\item \textbf{Bimodal distribution} there are two nodes to expectation that are some way from each other. 
-\end{itemize}
+<<d1, fig.height=4, echo=FALSE>>=
+plot(density(rbeta(100000, 5, 5)), main = "Normal Distribution")
+@
+\end{frame}
+
+\begin{frame}{The distribution of expectations 2}
+<<d2, fig.height=4, echo=FALSE>>=
+plot(density(rbeta(100000, 5, 2)), main = "Negative Skew")
+@
+\end{frame}
+
+\begin{frame}{The distribution of expectations 3}
+<<d3, fig.height=4, echo=FALSE>>=
+x <- rnorm(10000, -3, 1)
+y <- rnorm(10000, 3, 1)
+z <- rbind(x, y)
+plot(density(z), main = "Bimodal Density")
+@
 \end{frame}
 
 \begin{frame}{Effect of disappointed expectations}
@@ -140,7 +154,7 @@ The efficient market hypothesis
 
 \begin{frame}{Price plot Stock A}
 <<emh, echo=FALSE, fig.height=4.5, warning=FALSE, message=FALSE, warning=FALSE, message=FALSE>>=
-set.seed(2)
+set.seed(3)
 e <- rnorm(100)
 x <- rep(NA, 100)
 x[1] = 100
@@ -179,6 +193,16 @@ plot(BACR, type = 'l', main = "Bank of America", ylab = "BACR")
 @
 \end{frame}
 
+\begin{frame}{Random Walk and Market Efficiency}
+The Efficient Market Hypothesis (EMH) says that a weighted average of the interpretation of all relevant information is in the current price, therefore
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item If the next relevant information is a random variable, the change in price or returns are a random variable
+\item What is \emph{relevant information}? 
+\item How are interpretations of the information \emph{weighted}? 
+\item How does the information get into the price? 
+\end{itemize}
+\end{frame}
 
 \begin{frame}{Spectrum of efficiency}
 EMH is not binary: true or false
@@ -196,18 +220,6 @@ EMH is not binary: true or false
 \pause
 \vspace{0.8cm}
 Probably better to think of a \emph{spectrum of efficiency}: from more to less efficient depending on place and time
-\end{frame}
-
-
-\begin{frame}{Random Walk and Market Efficiency}
-The Efficient Market Hypothesis (EMH) says that a weighted average of the interpretation of all relevant information is in the current price, therefore
-\pause
-\begin{itemize}[<+-| alert@+>]
-\item If the next relevant information is a random variable, the change in price or returns are a random variable
-\item What is \emph{relevant information}? 
-\item How are interpretations of the information \emph{weighted}? 
-\item How does the information get into the price? 
-\end{itemize}
 \end{frame}
 
 \section{Price Discovery}

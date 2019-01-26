@@ -23,11 +23,11 @@ da$rebasespy <- rebalance(da$SPY)
 da$rebasetlt <- rebalance(da$TLT)
 
 plot(da$Date, da$rebasePort, type = 'l', xlab = "Date", ylab = "Re-based Value", 
-     main = "Portfolio Performance")
+     main = "Portfolio Performance", ylim = c(80, 420))
 lines(da$Date, da$rebasetlt, col = 'DarkGreen')
 lines(da$Date, da$rebasespy, col = 'Brown')
 legend('topleft', c('Portfolio', 'SPY', 'TLT'), lty = 1, 
-       col = c("Black", "DarkGreen", "Brown"))
+       col = c("Black",  "Brown", "DarkGreen"))
 # write the file to the directory so that it can be used in teh slides
 write.csv(da, file = './Data/port.csv')
 da$SPYl <- c(rep(NA, 1), da$SPY)[1:length(da$SPY)]
@@ -52,7 +52,12 @@ return(data.frame(N=n, AnnRet = AnnRet, AnnVol = AnnVol, Sharpe = AnnRet/AnnVol,
                   DailyMax = 100 * max, DailyMin = 100 * min))
        
 }
-a <- mystats(x = c(da$SPYR, da$TLTR, da$PORTR))
+mystats(x = c(da$SPYR, da$TLTR, da$PORTR))
+x <- data.frame(Equity = da$SPYR, Debt = da$TLTR, Portfolio = da$PORTR)
+apply(x, 2, FUN = mystats)
+xtable(t(sapply(x, FUN = mystats)))
+#==========================
+mystats(x)
 round(a, 2)
 require(xtable)
 xtable(a)

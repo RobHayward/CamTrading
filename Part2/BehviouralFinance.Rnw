@@ -290,6 +290,31 @@ P(B|I) &= \frac{0.12}{0.29} = 0.41
 \end{block}
 \end{frame}
 
+\begin{frame}{FANGs}
+	\includegraphics{facebook}
+	\includegraphics{amazon}
+	\includegraphics{netflix}
+	\includegraphics{google}
+\end{itemizse}
+\end{frame}
+
+\begin{frame}{Representitiveness}
+	Disregarding underlying probabilities
+\begin{itemize}[<+-| alert@+>]
+		\pause
+	\item Over the last 68 years HOLT at CS show that 49 companies have been in the top five of US stocks
+		\begin{itemize}
+			\item they hold the position for an average 6.5 years
+			\item the big exceptions are IBM, GE, GM, Altrica and Exxon
+		\end{itemize}
+	\item Europe ex-UK it is 30 in 34 years
+		\begin{itemize}
+			\item average 5.5 years
+			\item exceptions are Nestle, Unilever, Roche and Novartis
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
 \begin{frame}{Importance of heuristics}
 These heuristics explain two features that are commonly found in financial markets: 
 \pause
@@ -371,7 +396,7 @@ text(2.4, 6, "Overshooting")
 @
 \end{frame}
 
-
+\section{Institutional Features}
 \begin{frame}{Arbitrage}
 Friedman (1953)
 \pause
@@ -397,10 +422,91 @@ However, noise-trader risk may limit arbitrage
 \end{itemize}
 \end{frame}
 
+\begin{frame}{NASDAQ}
+<<nasdaq, fig.height = 4.5, echo = FALSE>>=
+da <- read.csv('../../Data/IXIC.csv')
+da$Date <- gsub("+AC0", "", da$Date, fixed = TRUE)
+da$Date <- as.Date(da$Date, format = "%Y-%m-%d")
+plot(da[, c(1, 5)], type = 'l', main = 'NASDAQ')
+@
+\end{frame}
+
+\begin{frame}{Game Theory and conformity}
+\begin{tikzpicture}[scale = 1.2]
+%\draw[very thin, color = gray](0, 0) grid (12, 7);
+\draw [thick, fill = green, fill opacity = 0.2] (3, 1) -- (6, 1) -- (6, 3) -- (3, 3)
+-- (3, 1);
+%\draw [thick, fill = teal, fill opacity = 0.2] (6, 1) -- (6, 3) -- (3, 3);
+%\draw [thick, fill = green, fill opacity = 0.2] (6, 1) -- (9, 1) -- (6, 3) -- (6, 1);
+\draw [thick, fill = teal, fill opacity = 0.2] (3, 3) -- (6, 3) -- (6, 5) -- (3, 5)
+-- (3, 3);
+\draw [thick, fill = green, fill opacity = 0.2] (6, 3) -- (9, 3) -- (9, 5) -- (6, 5) 
+-- (6, 3);
+%\draw [thick, fill = teal, fill opacity = 0.2] (9, 3) -- (9, 5) -- (6, 5);
+%\draw [thick, fill = green, fill opacity = 0.2] (3, 3) -- (6, 3) -- (3, 5) -- (3, 3);
+\draw [thick, fill = teal, fill opacity = 0.2] (6, 1) -- (9, 1) -- (9, 3) -- (6, 3) 
+-- (6, 1);
+\node at  (4.5, 2) {\small Everyone upset};
+\node at  (7.5, 2) {\small Fired};
+\node at  (4.5, 4) {\small Everyone happy};
+\node at  (7.5, 4) {\small Hated};
+\node at (4, 5) [above] {\scriptsize Go with boss};
+\node at (7, 5) [above] {\scriptsize Go against boss};
+\node [rotate = 90] at (2.5, 1.7) {\scriptsize Lose};
+\node [rotate = 90] at (2.5, 4.3) {\scriptsize Win};
+\node at (6, 6) {Decision};
+\node [rotate = 90] at (1, 3) [below] {Outcome};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Risk measurement}
+\begin{block}{}
+It may also be the case that 'inefficiencies' are not inefficiencies but a compensation for taking risk
+\end{block}
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Aware of risk and able to bear it
+\item Unaware and vulnerable
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Skewed distribution (crash risk)}
+<<d2, fig.height=4, echo=FALSE>>=
+plot(density(rbeta(100000, 5, 2)), main = "Negative Skew")
+@
+\end{frame}
+\begin{frame}{Regimes of calm and crisis}
+	Another way to look at this is to say that there are two regimes
+	\pause
+\begin{itemize}[<+-| alert@+>]
+	\item \textbf{Calm:} where there is a normal distribution with a very small standard deviation
+	\item \textbf{Crisis}: where there is a normal distribution or skew with a larger standard deviation
+	\item This is called a mixture distribution
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Nassim Taleb}
+\includegraphics{"../../Pictures/Taleb"}
+\end{frame}
+
+\begin{frame}{Examples of crash risk}
+\begin{itemize}[<+-| alert@+>]
+		\pause
+	\item The carry trade
+	\item Momentum
+	\item Selling out-of-the-money options
+	\item Banking
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Carry returns in calm and crisis}
+\includegraphics[scale = 0.42]{"../../UIPdoc/hist1a"}
+\end{frame}
 \section{Additional resources}
 \begin{frame}{Additional resources}
 \begin{itemize}[<+-| alert@+>]
 \pause
+\item \href{https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch12.htm}{Chapter 12: The State Of Long-Term Expectations (Keynes)} 
 \item \href{http://timharford.com/2016/03/how-to-make-good-guesses/}{Tim Harford}
 \item \href{http://www.independent.co.uk/news/obituaries/tony-dye-controversial-fund-manager-796811.html}{Tony Dye}
 \end{itemize}
