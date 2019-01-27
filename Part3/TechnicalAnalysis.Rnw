@@ -24,14 +24,16 @@
 
 \begin{frame}
 \titlepage
+\date{Feb 2019}
 \end{frame}
 
 \begin{frame}{Introduction}
 We have seen
 \pause
 \begin{itemize}[<+-| alert@+>]
-\item There is some evidence that investment decision-making diverges from the idea of \emph{expected utility theory}
-\item There is some evidence of \emph{serial correlation} and \emph{reversal} in asset prices
+\item There evidence that investment decision-making diverges from the idea of \emph{expected utility theory}
+\item There are frictions in the way that financial markets operate
+\item These cause \emph{serial correlation} and \emph{reversal} in asset prices
 \end{itemize}
 \pause
 \begin{block}{}
@@ -221,12 +223,12 @@ plotOHLC(dat, origin = "2014-12-25", ylab = "SP500", main = "Support at 1980")
 There are a wide range of other tools that are used to try to identify evolving or eroding sentiment
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item Trendlines
 \item Chart patterns
+\item Trendlines
 \item Moving average
-\item Momentum indicators
+\item Momentum 
+\item Volume 
 \item Divergence
-\item Volume indicators
 \end{itemize}
 \end{frame}
 
@@ -381,13 +383,13 @@ dat <- as.ts(da1[,c(2:5)])
 # to create one graph on top of the other and extend the margins.
 par(mfrow = c(2, 1), mar = c(2, 4, 2, 2))
 plotOHLC(dat, origin = "2014-12-25", ylab = "SP500", main = "SP500", xlab = "", xaxt = "n") 
-plot(da1$Date, da1$NC, type = 'l', ylab = "Net Change Oscillator", xlab = "Date")
+plot(da1$Date, da1$NC, type = 'l', ylab = "Net Change Oscillator", xlab = "Date", main = "NCO")
 abline(h = 1, col = 'red', lty = 2)
 abline(h = -1, col = 'red', lty = 2)
 @
 \end{frame}
 
-\begin{frame}{RSI}
+\begin{frame}{Relative Strength Index}
 The 14-day RIS is calculated as
 \pause
 \begin{block}{}
@@ -404,14 +406,19 @@ RS = \frac{\text{Average of last 14 positive closes}}{\text{Average of last 14 n
 \end{block}
 \end{frame}
 
-
-\begin{frame}{For the assignment}
-\begin{itemize}[<+-| alert@+>]
-\item Create a quantitative trading rule 
-\item Explain the inefficiency that the rule is supposed to capture 
-\item Test the trading rule on a real market
-\item Assess the use of the trading rule
-\end{itemize}
+\begin{frame}{RSI}
+<<rsi, warning=FALSE, message=FALSE, fig.height=4.6, echo=FALSE>>=
+library(quantmod)
+da1$RSI <- RSI(da1$Close)
+dat <- as.ts(da1[,c(2:5)])
+# to create one graph on top of the other and extend the margins.
+par(mfrow = c(2, 1), mar = c(2, 4, 2, 2))
+plotOHLC(dat, origin = "2014-12-25", ylab = "SP500", main = "SP500", 
+         xlab = "Relative Strength Index", xaxt = "n") 
+plot(da1$Date, da1$RSI, type = 'l', ylab = "RSI", xlab = "Date", main = "NCO")
+abline(h = 70, col = 'red', lty = 2)
+abline(h = 30, col = 'red', lty = 2)
+@
 \end{frame}
 
 \begin{frame}{Technical trading rules}
@@ -420,13 +427,27 @@ Three themes
 \begin{itemize}[<+-| alert@+>]
 \item Momentum or trend with moving average
 \item Over-shooting with standard deviation
-\item Support and resistance with maximum and minimum
+\item Support and resistance 
+\begin{itemize}
+\item reversals
+\item break-outs
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{You try}
+\begin{itemize}[<+-| alert@+>]
+\item Go to the US version of Yahoo finance
+\item Look at the S\&P 500 (\^GSCP)
+\item Try some of these technical tools
+\item Buy or sell on Monday?
 \end{itemize}
 \end{frame}
 
 \section{Additional resources}
 \begin{frame}{Additional resources}
 \begin{itemize}[<+-| alert@+>]
+\item \href{https:/finance.yahoo.com}{Yahoo Finance}
 \item \href{https://www.quandl.com/blog/interview-with-a-quant-part-oneyf}{Interview with quant 1}
 \item \href{https://www.quandl.com/blog/interview-with-a-quant-part-two}{Interview with quant 2}
 \item \href{https://blog.quandl.com/interview-with-a-quant-part-three}{Interview with quant 3}

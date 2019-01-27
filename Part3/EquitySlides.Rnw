@@ -1,0 +1,224 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage{tikz}
+ \usetikzlibrary{arrows,positioning}
+\usepackage{multirow}
+% Specify base color
+\usecolortheme[named=OliveGreen]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+% Title and author information
+\title{Equity 2}
+\author{Rob Hayward}
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Introduction}
+\begin{frame}{Equity valuation}
+Two frameworks for assessing equity
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Value Investment
+\item Competitive Advantage
+\end{itemize}
+\end{frame}
+
+\section{Value Investment}
+\begin{frame}{Value Investment}
+\frametitle{Value investment}
+\begin{center}
+\includegraphics[height = 3.0in]{../../Pictures/BGsmall}
+\end{center}
+\end{frame}
+
+\begin{frame}{Warren Buffet}
+\begin{itemize}[<+-| alert@+>]
+\item Founder and CEO of Berkshire Hathaway
+\item Former textile company turned into insurance
+\item Main shareholdings
+\begin{itemize}
+\item Washington Post
+\item Coca-Cola company
+\item General Re
+\item IBM
+\item State Street
+\item Goldman Sachs
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Value investment}
+Value investment depends upon
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Finding under-valued companies
+\begin{itemize}
+\item high dividend yield
+\item low PE
+\end{itemize}
+\item Companies that have a strong brand
+\item Companies that have strong management
+\item Long-term investments
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Moats}
+\centering
+\includegraphics[scale=0.45]{../../Pictures/moat}
+\end{frame}
+
+\begin{frame}{Words of Warren}
+\begin{block}{}
+`I never attempt to make money on the stock market. I buy on the assumption that they could close the market the next day and not reopen it for 5 years'
+\end{block}
+\pause
+\begin{block}{}
+`Only when the tide goes out do you discover who's been swimming naked'
+\end{block}
+\pause
+\begin{block}{}
+`Price is what you pay. Value is what you get'
+\end{block}
+\end{frame}
+
+\begin{frame}{Moats}
+	Morningstar use the following criteria to measure moats
+\begin{itemize}[<+-| alert@+>]
+		\pause
+	\item Intangible assets
+	\item Cost advantage
+	\item Switching costs
+	\item Network effects
+	\item Efficient scale
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Joseph Piotroski}
+Developed a \emph{value investment system}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Net Income (positive)
+\item Operating cash flow (positive)
+\item Return on Assets (above last year)
+\item Quality of earnings (Operating cash above net income)
+\item Long-term debt to assets (decreasing)
+\item Current ratio (increasing)
+\item Shares outstanding (decreasing)
+\item Gross margin (increasing)
+\item Asset turnover (increasing)
+% sales increase more than assets increase
+\end{itemize}
+\end{frame}
+
+\section{Competitive Advantage}
+\begin{frame}{Competitive advantage}
+Michael Porter (Harvard Business School)
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Cost leadership
+\item Innovation strategy 
+\item Operational effectiveness
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Michael Porter}
+\frametitle{Michael Porter}
+\begin{center}
+\includegraphics[height = 3.0in]{../../Pictures/Michael_Porter}
+\end{center}
+\end{frame}
+
+\begin{frame}{Five Competitive Forces}
+Five competitive forces
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item \textbf{Bargaining power} of suppliers
+\item \textbf{Threat} of substitutes
+\item \textbf{Bargaining power} of customers
+\item \textbf{Threat} of new entrants
+\end{itemize}
+\pause
+\begin{block}{}
+Industry Rivalry
+\end{block}
+\end{frame}
+
+%\begin{frame}{Bargaining power of suppliers}
+%\begin{itemize}[<+-| alert@+>]
+%\item How many substitute suppliers are there
+%\item Impact of inputs on cost or differentiation
+%\item Strength of distribution channel
+%\item Supplier concentration
+%\end{itemize}
+%\end{frame}
+%
+%\begin{frame}{Threat of substitutes}
+%\begin{itemize}[<+-| alert@+>]
+%\item Are there alternative products or services that serve the same need or desire?
+%\item Propensity of buyers to switch
+%\item Buyer switching costs
+%\item Number of substitute products
+%\item Quality of substitutes
+%\item Price of substitutes
+%\end{itemize}
+%\end{frame}
+%
+%\begin{frame}{Bargaining power of customers}
+%\begin{itemize}[<+-| alert@+>]
+%\item Buyer concentration
+%\item Dependency on lines of distribution
+%\item Sensitivity to buyer action (high fixed costs)
+%\item Buyer sensitivity to price
+%\item Buyer switching costs
+%\end{itemize}
+%\end{frame}
+%
+%\begin{frame}{Threat of new entrants}
+%\begin{itemize}[<+-| alert@+>]
+%\item Existence of barriers to entry 
+%\begin{itemize}
+%\item patents
+%\item rights 
+%\end{itemize}
+%\item Costs of entering
+%\item Economies of scale
+%\item Product differentiation
+%\item Switching costs
+%\item Possibility of retaliation
+%\item Distribution channel
+%\item Network effects
+%\end{itemize}
+%\end{frame}
+
+\section{The Presentation}
+\begin{frame}{Valuation}
+	Please provide a 10 minute presentation on \textbf{ONE} of the following
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Criteria for identifying corporate success that can be sustained
+\item A sector, industry or firm that will generate outsize returns in future, and why \dots
+\item An investment where you believe that the risk is lower than currently expected
+\end{itemize}
+\end{frame}
+
+\end{document}

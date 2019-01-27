@@ -12,7 +12,7 @@
 % Specify other colors and options as required
 \setbeamercolor{alerted text}{fg=Maroon}
 \setbeamertemplate{items}[square]
-\graphicspath{{../Pictures/}}
+\graphicspath{{../../Pictures/}}
 
 \AtBeginSection[]{
 \begin{frame}
@@ -35,9 +35,9 @@
 \titlepage
 \end{frame}
 
-\begin{frame}{Outline}
-\tableofcontents
-\end{frame}
+%\begin{frame}{Outline}
+%\tableofcontents
+%\end{frame}
 
 \section{Introduction}
 \begin{frame}{Information}
@@ -85,7 +85,23 @@ Expectations and their formation are the key to market moves
 \item More likely, weighted by money
 \end{itemize}
 \item It is not necessarily normally distributed
+\item The range of possible outcomes is also important
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Galton's ox}
+\includegraphics[scale=0.2]{galton}
+\end{frame}
+
+\begin{frame}{Market and crowds}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=1\textwidth]{Mackay_1841_edition_front_page}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=1\textwidth]{Wisecrowds}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{The distribution of expectations}
@@ -116,7 +132,7 @@ How are changes in expectations likely to affect market performance?
 \item What sort of position are held by short-term speculative accounts? 
 \item Where are the \emph{take-profits} and \emph{stop-losses}
 \item What sort of positions are held by long-term stable accounts (real money)? 
-\item What makes them change their view?
+\item What makes speculators and real money change their view?
 \end{itemize}
 \end{frame}
 
@@ -328,69 +344,69 @@ text(2.4, 6, "Overshooting")
 @
 \end{frame}
 
-\section{Interest rate expectations}
-\begin{frame}{Interest rate expectations}
-There are a number of ways that interest rate expectations can be determined 
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item A poll of people (economists?)
-\item Short-term interest rate futures (STIRS)
-\item Implied forward rates
-\end{itemize}
-\end{frame}
-
-\begin{frame}{US interest rates}
-<<money, echo=FALSE, fig.height=4.6, fig.width=6.7, cache=TRUE>>=
-da <- read.csv('../Data/Rate.csv', skip = 5)
-da$Date <- as.Date(da$Time.Period, format = "%Y-%m-%d")
-  plot(da$Date, da[,2], type = 'l', main = "US Official Interest Rate", col = 'Darkgreen', 
-     xlab = "Year", ylab = "Rate")
-@
-\end{frame}
-
-\section{STIRS}
-\begin{frame}{CME Eurodollar}
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Unit of trading: \$1000000
-\item Delivery: Mar, Jun, Sep and Dec. 
-\item Quotation: 100 minus rate of interest
-\item Minimum price fluctuation: 0.005 (0.0025 first month)
-\item $ \$1000000 \times 0.005/100 \times 0.25 = \$12.50$
-\item Last trading day: 10.00 two business days prior to the third Wednesday of the delivery month
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Specification}
-\begin{center}
-\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
-\begin{tabular}{llll}
-Contract & Code & Price & Value\\
-\hline
-Mar 2018 & H18 & 98.125& 1.875\\
-Jun 2018 & M18 & 97.925 & 2.075\\ 
-Sep 2018 & U18 & 97.805 &2.195\\
-Dec 2018 & Z18 & 97.685& 2.315\\
-Mar 2019 & H19 & 97.61 & 2.39\\
-Jun 2019 & M19 & 97.52 & 2.48\\
-Sep 2019 & U19 & 97.46 & 2.54\\
-Dec 2019 & Z19 & 97.39 & 2.61\\
-\hline
-\end{tabular}
-\end{center}
-\href{www.cmegroup.com/trading/interest-rates/eurodollar.html}{Latest CME Prices}
-\end{frame}
-
-\begin{frame}{Trading}
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Rate expectations
-\item Kremlinology
-\item Natural levels for expectations (support and resistance)
-\item Spreads between different months (reduces risk)
-\item Spreads between different counties (link to foreign exchange)
-\end{itemize}
-\end{frame}
+%\section{Interest rate expectations}
+%\begin{frame}{Interest rate expectations}
+%There are a number of ways that interest rate expectations can be determined 
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item A poll of people (economists?)
+%\item Short-term interest rate futures (STIRS)
+%\item Implied forward rates
+%\end{itemize}
+%\end{frame}
+%
+%\begin{frame}{US interest rates}
+%<<money, echo=FALSE, fig.height=4.6, fig.width=6.7, cache=TRUE>>=
+%da <- read.csv('../Data/Rate.csv', skip = 5)
+%da$Date <- as.Date(da$Time.Period, format = "%Y-%m-%d")
+%  plot(da$Date, da[,2], type = 'l', main = "US Official Interest Rate", col = 'Darkgreen', 
+%     xlab = "Year", ylab = "Rate")
+%@
+%\end{frame}
+%
+%\section{STIRS}
+%\begin{frame}{CME Eurodollar}
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item Unit of trading: \$1000000
+%\item Delivery: Mar, Jun, Sep and Dec. 
+%\item Quotation: 100 minus rate of interest
+%\item Minimum price fluctuation: 0.005 (0.0025 first month)
+%\item $ \$1000000 \times 0.005/100 \times 0.25 = \$12.50$
+%\item Last trading day: 10.00 two business days prior to the third Wednesday of the delivery month
+%\end{itemize}
+%\end{frame}
+%
+%\begin{frame}{Specification}
+%\begin{center}
+%\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+%\begin{tabular}{llll}
+%Contract & Code & Price & Value\\
+%\hline
+%Mar 2018 & H18 & 98.125& 1.875\\
+%Jun 2018 & M18 & 97.925 & 2.075\\ 
+%Sep 2018 & U18 & 97.805 &2.195\\
+%Dec 2018 & Z18 & 97.685& 2.315\\
+%Mar 2019 & H19 & 97.61 & 2.39\\
+%Jun 2019 & M19 & 97.52 & 2.48\\
+%Sep 2019 & U19 & 97.46 & 2.54\\
+%Dec 2019 & Z19 & 97.39 & 2.61\\
+%\hline
+%\end{tabular}
+%\end{center}
+%\href{www.cmegroup.com/trading/interest-rates/eurodollar.html}{Latest CME Prices}
+%\end{frame}
+%
+%\begin{frame}{Trading}
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item Rate expectations
+%\item Kremlinology
+%\item Natural levels for expectations (support and resistance)
+%\item Spreads between different months (reduces risk)
+%\item Spreads between different counties (link to foreign exchange)
+%\end{itemize}
+%\end{frame}
 
 
 \section{Additional resources}
@@ -398,12 +414,13 @@ Dec 2019 & Z19 & 97.39 & 2.61\\
 \begin{itemize}[<+-| alert@+>]
 \pause
 
-\item \href{www.cmegroup.com/trading/interest-rates/eurodollar.html}{Latest CME Prices}
-\item \href{https://www.theice.com/products/38527986/Three-Month-Euribor-Futures}{ICE 3m Euribor}
-\item \href{https://www.theice.com/products/37650330/Three-Month-Sterling-Short-Sterling-Future/data}{ICE Short-sterling}
+%\item \href{www.cmegroup.com/trading/interest-rates/eurodollar.html}{Latest CME Prices}
+%\item \href{https://www.theice.com/products/38527986/Three-Month-Euribor-Futures}{ICE 3m Euribor}
+%\item \href{https://www.theice.com/products/37650330/Three-Month-Sterling-Short-Sterling-Future/data}{ICE Short-sterling}
 \item \href{https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch12.htm}{Chapter 12: The State Of Long-Term Expectations (Keynes)} 
-\item \href{https://www.federalreserve.gov/}{Board of the Federal Reserve}
-\item \href{https://sffed-education.org/chairthefed/}{Fed game}
+%\item \href{https://www.federalreserve.gov/}{Board of the Federal Reserve}
+%\item \href{https://sffed-education.org/chairthefed/}{Fed game}
+\item \href{https://en.wikipedia.org/wiki/The_Wisdom_of_Crowds}{The Wisdom of Crowds}
 \end{itemize}
 \end{frame}
 

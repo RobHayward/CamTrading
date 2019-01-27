@@ -1,0 +1,184 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage[comma, sort&compress]{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\bibliographystyle{agsm}
+% Specify base color
+\usecolortheme[named=OliveGreen]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+
+% Title and author information
+\title{Commodities}
+\author{Rob Hayward}
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+\begin{frame}{Introduction}
+Commodities are traded on exchanges.  
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item The futures markets have the most liquidity
+\item Liquidity requires standardisation
+\item Set delivery dates and time
+\item Set quantities
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Importance of liquidity}
+Liquidity is necessary to reduce the cost of transactions and to facilitate trade. There are two types of investor:
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item \emph{Hedger}: these are investors with an underlying interest in the commodity that is being traded
+\item \emph{Speculator}: those with no underlying interest.  
+\item Keynes and Hicks argue that hedgers pay speculators to take risk
+\item Knight argues that speculators use specialisation to reduce risk with purchase of information and diversification
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Pricing futures contracts}
+\begin{block}{}
+\begin{equation*}
+F(t, T) = S(t) \times (1 +r)^{(T-t)}
+\end{equation*}
+\end{block}{}
+or, in continuous time, 
+\begin{block}{}
+\begin{equation*}
+F(t, T) = S(t)e^{r(T-t)}
+\end{equation*}
+\end{block}
+For other futures, storage costs, income in the form of dividends and coupons and any other benefits that accrue from the holding of the commodity. This may be particularly important if there are large storage costs involved for commodities.
+\end{frame}
+
+
+\begin{frame}{Expectations}
+When there are disruptions in the supply of the commodity, this arbitrage mechanism will not work. In that case, the pricing will be determined by exceptions. 
+\begin{block}{}
+\begin{equation*}
+F(t, T) = E_t[S(T)]
+\end{equation*}
+\end{block}
+\end{frame}
+
+\begin{frame}{Calendar spreads}
+A technique that can reduce risk is to trade a calendar spread
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Futures contracts are set in March, June, Sep, Dec
+\item Spreads between two or more contracts remove risk of a large move in the commodity
+\item \emph{Contango}: Future above spot or far contract above near
+\item \emph{Normal backwardation}: Spot above future or near above far
+\item Trade can be technical or based on the supply-demand
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Commodity investment}
+\begin{itemize}[<+-| alert@+>]
+\item Assess the supply and demand for commodity
+\begin{itemize}
+\item Economic growth/development
+\item Weather
+\item Political factors
+\end{itemize}
+\item Looking for speculative extremes
+\begin{itemize}
+\item COT positions
+\item Option prices
+\end{itemize}
+\item Calendar spreads or product spreads
+\end{itemize}
+\end{frame}
+
+\section{Interest rate expectations}
+\begin{frame}{Interest rate expectations}
+There are a number of ways that interest rate expectations can be determined 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item A poll of people (economists?)
+\item Short-term interest rate futures (STIRS)
+\item Implied forward rates
+\end{itemize}
+\end{frame}
+
+\begin{frame}{US interest rates}
+<<money, echo=FALSE, fig.height=4.6, fig.width=6.7, cache=TRUE>>=
+da <- read.csv('../Data/Rate.csv', skip = 5)
+da$Date <- as.Date(da$Time.Period, format = "%Y-%m-%d")
+  plot(da$Date, da[,2], type = 'l', main = "US Official Interest Rate", col = 'Darkgreen', 
+     xlab = "Year", ylab = "Rate")
+@
+\end{frame}
+
+\section{STIRS}
+\begin{frame}{CME Eurodollar}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Unit of trading: \$1000000
+\item Delivery: Mar, Jun, Sep and Dec. 
+\item Quotation: 100 minus rate of interest
+\item Minimum price fluctuation: 0.005 (0.0025 first month)
+\item $ \$1000000 \times 0.005/100 \times 0.25 = \$12.50$
+\item Last trading day: 10.00 two business days prior to the third Wednesday of the delivery month
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Specification}
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{llll}
+Contract & Code & Price & Value\\
+\hline
+Mar 2018 & H18 & 98.125& 1.875\\
+Jun 2018 & M18 & 97.925 & 2.075\\ 
+Sep 2018 & U18 & 97.805 &2.195\\
+Dec 2018 & Z18 & 97.685& 2.315\\
+Mar 2019 & H19 & 97.61 & 2.39\\
+Jun 2019 & M19 & 97.52 & 2.48\\
+Sep 2019 & U19 & 97.46 & 2.54\\
+Dec 2019 & Z19 & 97.39 & 2.61\\
+\hline
+\end{tabular}
+\end{center}
+\href{www.cmegroup.com/trading/interest-rates/eurodollar.html}{Latest CME Prices}
+\end{frame}
+
+\begin{frame}{Trading}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Rate expectations
+\item Kremlinology
+\item Natural levels for expectations (support and resistance)
+\item Spreads between different months (reduces risk)
+\item Spreads between different counties (link to foreign exchange)
+\end{itemize}
+\end{frame}
+
+\item \href{www.cmegroup.com/trading/interest-rates/eurodollar.html}{Latest CME Prices}
+\item \href{https://www.theice.com/products/38527986/Three-Month-Euribor-Futures}{ICE 3m Euribor}
+\item \href{https://www.theice.com/products/37650330/Three-Month-Sterling-Short-Sterling-Future/data}{ICE Short-sterling}
+\item \href{https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch12.htm}{Chapter 12: The State Of Long-Term Expectations (Keynes)} 
+\item \href{https://www.federalreserve.gov/}{Board of the Federal Reserve}
+\item \href{https://sffed-education.org/chairthefed/}{Fed game}
+\end{itemize}
+\end{frame}
+
+\end{document}

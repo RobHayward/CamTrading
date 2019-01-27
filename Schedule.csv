@@ -2,28 +2,29 @@ Day,Start,End,Activity,Notes
 8-Feb,10:00,10:15,Introductions,
 ,10:15,10:45,FinSystem,IntroTrade.pdf
 ,10:45,11:30,First Trade (intro),Use ESCP cases
---,---,---,---,---
 ,11:30,11:45,Coffee,
 ,11:45,12:15,Customer Orders,Use ESCP cases 
 ,12:15,12:45,Institutional features,LiquidStructure.pdf
 ,12:45,13:15,Tbills and debriefing,T-bills with support sheet
 ,13:15,14:15,Lunch,
-,14:15,14:30,Look at live market,
-,14:30,15:00,Expectations and EMH, 
-,15:00,15:45,Behavioural finance,Return to live market
-,15:45,16:00,Coffee,
-,16:00,16:30,Finding inefficiencies,Use own knowledge
-,16:30,17:30,Group work to look for inefficiencies,Prepare presentation
 --,---,---,---,---
+,14:15,14:30,Look at live market,
+,14:30,15:00,Expectations and EMH,ExpectationsandPriceDiscovery.pdf 
+,15:00,15:40,Behavioural finance,BehaviouralFinance.pdf
+,15:40,15:45,Return to live market,
+,15:45,16:00,Coffee,
+,16:00,16:30,Finding inefficiencies,EquitySlides.pdf
+,16:30,17:30,Group work to look for inefficiencies,Prepare presentation
 9-Feb,09:00,09:15,Debriefing,
-,09:15,09:45,Introduction to futures,Prepare the case
-,09:45,10:30,Commodity trading,
+,09:15,09:45,Introduction to futures,Futures.Rnw
+,09:45,10:30,Commodity trading,Commodities_Slides.pdf
 ,10:30,10:45,Coffee,
-,10:45,11:15,Interest rate futures,
-,11:15,12:15,Pairs trading/Relative value, options case?
+,10:45,11:15,Technical analysis,TechnicalAnalysis.pdf
+,11:15,12:15,Pairs trading/Relative value,
 ,12:15,13:45,Lunch,
+--,---,---,---,---
 ,13:45,14:45,Presentations,
 ,14:45,15:15,Introduction to ETF,
 ,15:15,15:30,Coffee,
-,15:30,16:00,Using ETF in portfolio, Smart Beta
+,15:30,16:00,Using ETF in portfolio,Smart Beta
 ,16:00,17:00,Optional (Event StudyTechnical),

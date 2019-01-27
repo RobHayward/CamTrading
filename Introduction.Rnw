@@ -80,29 +80,24 @@
 \includegraphics[scale=0.5]{happy}
 \end{frame}
 
-\begin{frame}{Frame}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \begin{itemize}[<+-| alert@+>]
-\item Show you how financial markets work
-\item Help you develop some practical methods that  will help you find inefficiencies and manage your own portfolio
-\item Get you to think more about risk and uncertainty
-\end{itemize}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \includegraphics[width=1\textwidth]{sad}
-        \end{column}
-    \end{columns}
-\end{frame}
-\section{Where we will go}
-\begin{frame}{Where will we go}
-\begin{itemize}[<+-| alert@+>]
-\item Discuss structure and evolution of financial markets
-\item Talk about expectations and the way that information gets into asset prices
-\item Look at technical trading rules and event studies
-\item Allow you to develop your own methods of identifying inefficiencies
-\item Discuss cheap and effective methods to manage your own portfolio
-\end{itemize}
+\begin{frame}{Where we will go}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{table}
+\begin{center}
+\begin{tabular}{l l l }
+\textbf{Day} & \textbf{Time} & \textbf{Topic} \\
+\hline
+Friday&Morning&The financial system\\
+&&Customer Orders\\
+&Afternoon&Expectations and EMH\\ 
+&&Finding inefficiencies\\
+Saturday&Morning&Introduction to derivatives\\
+&&Technical Analysis\\
+&Afternoon&Pairs Trade\\
+&&Introduction to ETF
+\end{tabular}
+\end{center}
+\end{table}
 \end{frame}
 
 \begin{frame}{Issues}
@@ -110,7 +105,6 @@ There are a number of decisions that I have made to simplify:
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Data
-\includegraphics[scale=0.5]{R2}
 \begin{itemize}
 \item I have provided data in csv format
 \item data is big business
@@ -123,6 +117,7 @@ There are a number of decisions that I have made to simplify:
 \end{itemize}
 \pause
 \includegraphics[scale=0.5]{python}
+\includegraphics[scale=0.5]{R2}
 \end{frame}
 
 \begin{frame}{Key points}
@@ -140,7 +135,6 @@ There are a number of decisions that I have made to simplify:
 \end{itemize}
 \end{itemize}
 \end{frame}
-\end{document}
 
 \begin{frame}{Assignment}
 \begin{block}{}

@@ -11,7 +11,7 @@
 % Specify base color
 \usecolortheme[named=OliveGreen]{structure}
 % See http://goo.gl/p0Phn for other colors
-
+\graphicspath{{../../Pictures/}}
 % Specify other colors and options as required
 \setbeamercolor{alerted text}{fg=Maroon}
 \setbeamertemplate{items}[square]
@@ -28,7 +28,7 @@
 }
 
 % Title and author information
-\title{Behavioural Finance}
+\title{Behavioural bias and institutional frictions}
 \author{Rob Hayward}
 \date{Feb 2018}
 
@@ -121,6 +121,17 @@ In words,
 \item Whether I believe that I can sell to someone at a higher price depends on what I think that others think
 \end{itemize}
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Market and crowds}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=1\textwidth]{Mackay_1841_edition_front_page}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=1\textwidth]{Wisecrowds}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 %\begin{frame}{Bad day wall street}
@@ -291,14 +302,13 @@ P(B|I) &= \frac{0.12}{0.29} = 0.41
 \end{frame}
 
 \begin{frame}{FANGs}
-	\includegraphics{facebook}
-	\includegraphics{amazon}
-	\includegraphics{netflix}
-	\includegraphics{google}
-\end{itemizse}
+	\includegraphics[scale=0.5]{facebook}
+	\includegraphics[scale=0.5]{amazon}
+	\includegraphics[scale=0.5]{netflix}
+	\includegraphics[scale=0.5]{google}
 \end{frame}
 
-\begin{frame}{Representitiveness}
+\begin{frame}{Representativeness}
 	Disregarding underlying probabilities
 \begin{itemize}[<+-| alert@+>]
 		\pause

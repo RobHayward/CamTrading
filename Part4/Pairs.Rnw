@@ -36,11 +36,26 @@
 \titlepage
 \end{frame}
 
-\begin{frame}{Outline}
-\tableofcontents
-\end{frame}
+%\begin{frame}{Outline}
+%\tableofcontents
+%\end{frame}
 
 \section{Introduction}
+\begin{frame}{Pairs and relative value}
+These are two related methods that can be used to reduce risk and simplify valuation
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Pairs: buy one and sell the other 
+\begin{itemize}
+\item the market risk is removed
+\item convergence or divergence
+\end{itemize}
+\item Relative value
+\begin{itemize}
+\item value relative to another asset
+\end{itemize}
+\end{itemize}
+\end{frame}
 
 \section{Convergence}
 \begin{frame}{Convergence}
@@ -61,8 +76,7 @@ The trade depends on a temporary breakdown in the correlation between two simila
 \end{itemize}
 \end{frame}
 
-\section{Relative value trading}
-\begin{frame}{Relative value}
+\begin{frame}{Convergent realationship}
 <<Coke, echo=FALSE, fig.height=5, warning=FALSE>>=
 da1 <- read.csv('../Data/COKE.csv', colClasses=c('Date'='Date'))
 da2 <- read.csv('../Data/PEP.csv', colClasses=c('Date'='Date'))
@@ -242,6 +256,14 @@ names <- c("Date", "10-year", "2-year")
  @
  \end{frame}
  
+\begin{frame}{10y vs 2y}
+<<Yield2, echo=FALSE, fig.height=5, warning=FALSE>>=
+par(mfrow = c(1, 2))
+plot(da$'10-year' - da$'2-year' ~ da$Date, xlab = 'Date', ylab = '10-year - 2-year', type = 'l')
+plot(da$'10-year'/da$'2-year' ~ da$Date, xlab = 'Date', ylab = '10-year/2-year', type = 'l')
+@
+\end{frame}
+
 %\begin{frame}{Regression 2 on 10}
 %Dependent variable is 10 year
 %% latex table generated in R 3.2.0 by xtable 1.7-4 package
@@ -372,8 +394,8 @@ da2$Date <- as.Date(da2$Date, format = "%d/%m/%Y")
 # I cheated and just looked at the index numbers. There must be a better way
 plot(da2$Date[62:433], da2$Spread[62:433], type = 'l', col = 'darkgreen', 
      main = "Brent - WTI spread", ylab = "Spread", xlab = "Date")
-abline(h = 4, col = 'Green', lty = 2, lwd = 2)
-abline(h = -4, col = 'Green', lty = 2, lwd = 2)
+abline(h = 4, col = 'black', lty = 2, lwd = 1)
+abline(h = -4, col = 'black', lty = 2, lwd = 1)
 @
 \end{frame}
 
@@ -383,8 +405,8 @@ da2 <- read.csv("../../Trading/Data/brent-wti.csv")
 da2$Date <- as.Date(da2$Date, format = "%d/%m/%Y")
 plot(da2$Date, da2$Spread, type = 'l', col = 'darkgreen', 
      main = "Brent - WTI spread", ylab = "Spread", xlab = "Date")
-abline(h = 4, col = 'Green', lty = 2, lwd = 2)
-abline(h = -4, col = 'Green', lty = 2, lwd = 2)
+abline(h = 4, col = 'Black', lty = 2, lwd = 1)
+abline(h = -4, col = 'Black', lty = 2, lwd = 1)
 @
 \end{frame}
 
