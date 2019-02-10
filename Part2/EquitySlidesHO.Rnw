@@ -1,4 +1,4 @@
-\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
 
 % Specify theme
 \usetheme{Madrid}
@@ -25,8 +25,9 @@
   \end{frame}
 }
 % Title and author information
-\title{Equity 2}
+\title{Equity}
 \author{Rob Hayward}
+\date{Feb 2019}
 \begin{document}
 
 \begin{frame}
@@ -217,7 +218,7 @@ Industry Rivalry
 \begin{itemize}[<+-| alert@+>]
 \item Criteria for identifying corporate success that can be sustained
 \item A sector, industry or firm that will generate outsize returns in future, and why \dots
-\item An investment where you believe that the risk is lower than currently expected
+\item An investment where you believe that the risk is lower than that currently expected
 \end{itemize}
 \end{frame}
 

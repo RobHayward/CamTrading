@@ -19,6 +19,14 @@
 % See http://goo.gl/p0Phn for other colors
 
 % Specify other colors and options as required
+\usetikzlibrary{shapes.geometric, arrows}
+%\usepackage{adjustbox}
+\tikzstyle{block} = [rectangle, rounded corners, minimum width=3cm, 
+  minimum height= 2cm, text centered, text width = 2.8cm, draw = black, fill = green!20]
+\tikzstyle{shape1} = [circle, minimum width = 3.0cm, fill = green!20, text centered, 
+text width = 1.4cm, draw = black]
+\tikzstyle{arrow} = [thick, ->, >=stealth]
+\tikzstyle{arrow2} = [thick, <->, >=stealth]
 \setbeamercolor{alerted text}{fg=Maroon}
 \setbeamertemplate{items}[square]
 \AtBeginSection[]{
@@ -36,16 +44,16 @@
 % Title and author information
 \title{Constructing your own portfolio}
 \author{Rob Hayward}
-\date{Feb-2019}
+\date{Feb 2019}
 
 \begin{frame}
 \titlepage
 \end{frame}
 
-\begin{frame}
-\frametitle{Outline} 
-\tableofcontents
-\end{frame}
+%\begin{frame}
+%\frametitle{Outline} 
+%\tableofcontents
+%\end{frame}
 
 \section{Modern portfolio theory}
 
@@ -269,6 +277,84 @@ barplot(names.arg = da$Year, height = da$X, xlab = "Date", main = "The Increase 
 @
 \end{frame}
 
+\begin{frame}{Physical  ETF structure}
+%\resizebox{4cm}{!}{
+\begin{center}
+\begin{figure}
+\begin{tikzpicture}
+\scope[shift = {(-6cm, -5.0cm)}, transform canvas={scale=0.9}]
+%  \draw[very thin, color = gray](0, 0) grid (12, 7);
+\node at (2, 2.5) (Stock Exchange) [block] {Stock Exchange};  
+\node at (10, 2.5) [block] {Retail and Institutional Investors};  
+\node at (2, 6.5) [block] {Authorised Participant};  
+\node at (10, 6.5) [block] {ETF};  
+% AP - stock exchange
+\draw [arrow2] (1, 3.5) -- node[left] {Cash} (1, 5.5);
+\draw [arrow2] (3, 5.5) -- node[right] {ETF} (3, 3.5);
+% Primary Market - creation
+\node at (6, 8.5) {\textbf{PRIMARY MARKET}}; 
+\node at (6, 8) {\textbf{Creation}}; 
+\draw [arrow] (3.6, 7) -- node[above] {Creation Unit} (8.4, 7);
+\draw [arrow] (8.4, 7.1) -- node[below] {Portfolio of Securities} (3.6, 7.1);
+% Primary market - redemption
+\node at (6, 5.1) {\textbf{Redemption}}; 
+\draw [arrow] (3.6, 6) -- node[above] {Creation Unit} (8.4, 6);
+\draw [arrow] (8.4, 5.9) -- node[below] {Portfolio of Securities} (3.6, 5.9);
+% Secondary Market
+\node at (6, 0.6) {\textbf{SECONDARY MARKET}}; 
+\draw [arrow2] (3.6, 2.5) -- node[above] {Cash} (8.4, 2.5);
+\draw [arrow2] (8.4, 2.0) -- node[below] {ETF} (3.6, 2.0);
+\endscope
+\end{tikzpicture}
+%\caption{\small{ETF: Primary and Secondary markets: Researve Bank of Australia (March 2011 Bulletin)}}
+\end{figure}
+\end{center}
+\end{frame}
+
+\begin{frame}{Synthetic ETF structure}
+\begin{center}
+\begin{figure}
+\begin{tikzpicture}
+\scope[shift = {(-6cm, -4.8cm)}, transform canvas={scale=0.85}]
+% structure 
+%\draw[very thin, color = gray](0, 0) grid (12, 8);
+%\draw[dashed] (3, 1) -- (3, 8);
+%\draw[dashed] (9, 1) -- (9, 8);
+%\node at (2, 8) {Stage One};
+%\node at (6, 8) {Stage Two};
+%\node at (10, 8) {Stage Three};
+% main blocks
+\node at (6.2, 7.5) [block] {Swap Counterparty};  
+\node at (1, 4.3) [block] {Authorised Participant};  
+\node at (11.0, 5.0) [shape1]{Collateral Basket};
+\node at (6.2, 4.3) [block] {ETF};  
+%\node at (10, 1) [block] {Swap Counterparty 2};  
+\node at (6.2, 1.0) [block] {Retail and Institutional Investors};  
+\node at (1, 1.0) [block] {Exchange};  
+% the arrows
+% Interest rate swap
+\draw [arrow] (7.8, 4.1) -- node[below] {Cash} (9.5, 4.8);
+\draw [arrow] (9.5, 4.8) -- node[above right, text width=2cm, align=center] {Return on collateral} (7.8, 7.9);
+%\draw [arrow] (6, 6.0) -- node[left] {Variable rate cash} (6, 4.8);
+% Creatiom units 
+\draw [arrow] (4.6, 4.0) -- node[above, text width=2cm, align=center] {Index Return} (2.6, 4);
+\draw [arrow] (2.6, 3.8) -- node[below] {Cash} (4.6, 3.8);
+% AP arbitrage
+\draw [arrow2] (1, 2.0) -- node[left] {Cash} (1, 3.3);
+\draw [arrow2] (1.2, 2.0) -- node[right] {ETF} (1.2, 3.3);
+% Secondary market
+\draw [arrow2] (2.6, 1.2) -- node[above] {ETF} (4.6, 1.2);
+\draw [arrow2] (2.6, 0.8) -- node[below] {Cash} (4.6, 0.8);
+% Return swap
+%\draw [arrow] (7.5, 2.9) -- node[above right, distance = 2cm] {Variable rate cash} (10.1, 2.0);
+\draw [arrow] (6.5, 6.5) -- node[left] {Index return} (6.5, 5.3);
+\endscope
+\end{tikzpicture}
+%\caption{Synthetic ETF: Primary and Secondary markets: Researve Bank of Australia (March 2011 Bulletin)}
+\end{figure}
+\end{center}
+\end{frame}
+
 \begin{frame}{Risk of ETF}
 The proliferation of ETF has raised some concerns
 \begin{itemize}[<+-| alert@+>]
@@ -392,7 +478,7 @@ Annualised returns by decade.  Arnott, Hsu and More (2005)
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Advantagees with additional return}
+\begin{frame}{Advantages with additional return}
 You have the advantages of the \emph{capitalisation-weighted} investment without the costs
 \begin{itemize}[<+-| alert@+>]
 \pause
@@ -493,31 +579,6 @@ Most common factors, what they are and how they can be measured
 \end{itemize}
 \end{frame}
 
-\begin{frame}{ESG}
-	%	\includegraphics[scale 0.6]{bp}
-	Increased attention to ESG appears to come from three main sources
-	\pause 
-\begin{itemize}[<+-| alert@+>]
-	\item ESG factors may help to improve performance
-	\item Experience of ESG-related losses
-		\begin{itemize}
-			\item Banking and GFC
-			\item BP and Deepwater Horizon
-			\item Volkswagen emissions
-		\end{itemize}
-	\item Perception that \emph{millennials} will have a much greater focus on ESG issues as they become more prominent in the investment industry
-\end{itemize}
-\end{frame}
-
-\begin{frame}{ESG}
-	There are three main aspects of Environmental, Social and Governance investment
-\begin{itemize}[<+-| alert@+>]
-	\pause
-\item Screening for companies that may face difficulties
-\item Positively identifying companies that have qualities that will help them to outperform
-\item Active involvement in companies to change the way that they behave
-\end{itemize}
-\end{frame}
 
 \begin{frame}{MSCI study of factors}
 Investec analysis of following factors for S\&P 500 and MSCI EAFE (Dec 1991 to Dec 2015)
@@ -577,6 +638,37 @@ International stocks; risk-adjusted return is return per unit of volatility. Ben
 % produce excess retruns over the long-run. 
 % Do we use the next slide or put some of this information in the sliede abovve
 
+\begin{frame}{ESG}
+	%	\includegraphics[scale 0.6]{bp}
+	Increased attention to ESG appears to come from three main sources
+	\pause 
+\begin{itemize}[<+-| alert@+>]
+	\item ESG factors may help to improve performance
+	\item Experience of ESG-related losses
+		\begin{itemize}
+			\item Banking and GFC
+			\item BP and Deepwater Horizon
+			\item Volkswagen emissions
+		\end{itemize}
+	\item Perception that \emph{millennials} will have a much greater focus on ESG issues as they become more prominent in the investment industry
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Turbulence}
+\includegraphics[scale = 0.5]{storm}
+\end{frame}
+
+\begin{frame}{ESG}
+	There are three main aspects of Environmental, Social and Governance investment
+\begin{itemize}[<+-| alert@+>]
+	\pause
+\item Screening for companies that may face difficulties
+\item Positively identifying companies that have qualities that will help them to outperform
+\item Active involvement in companies to change the way that they behave
+\end{itemize}
+\end{frame}
+
 \section{Portfolio Construction}
 \begin{frame}{ETF list}
 \begin{table}
@@ -622,9 +714,9 @@ da <- read.csv('../Data/port.csv')
 plot(da$Date, da$rebasePort, type = 'l', xlab = "Date", ylab = "Re-based Value", 
      main = "Portfolio Performance", ylim = c(90, 420))
 lines(da$Date, da$rebasetlt, col = 'DarkGreen')
-lines(da$Date, da$rebasespy, col = 'MyGreen')
-legend('topleft', c('Portfolio', 'SPY', 'TLT'), lty = 1, 
-       col = c("Black", "MyGreen","DarkGreen" ))
+lines(da$Date, da$rebasespy, col = 'blue')
+legend('topleft', inset = 0.05, c('Portfolio', 'SPY', 'TLT'), lty = 1, 
+       col = c("Black", "blue","DarkGreen" ))
 @
 \end{frame}
 

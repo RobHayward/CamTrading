@@ -29,7 +29,7 @@
 % Title and author information
 \title{Pairs and Relative value}
 \author{Rob Hayward}
-\date{Feb 2018}
+\date{Feb 2019}
 \begin{document}
 
 \begin{frame}
@@ -445,19 +445,19 @@ This is the original hedge fund strategy
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Relative value}
-PE ratio is particularly useful for comparing firms in similar industries
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item PE says something about expected earnings' growth
-\item If the PE ratio of firms in a similar industry is different
-\begin{itemize}
-\item is it justified? 
-\item if not, they may be mis-valuation
-\end{itemize}
-\item This can allow focus on specialist knowledge
-\end{itemize}
-\end{frame}
+%\begin{frame}{Relative value}
+%PE ratio is particularly useful for comparing firms in similar industries
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item PE says something about expected earnings' growth
+%\item If the PE ratio of firms in a similar industry is different
+%\begin{itemize}
+%\item is it justified? 
+%\item if not, they may be mis-valuation
+%\end{itemize}
+%\item This can allow focus on specialist knowledge
+%\end{itemize}
+%\end{frame}
 
 \begin{frame}{For you}
 Look for a pair of securities, commodities, exchange rates that you believe will be stable or will diverge.  Complete one of the following

@@ -25,8 +25,9 @@
   \end{frame}
 }
 % Title and author information
-\title{Equity 2}
+\title{Equity}
 \author{Rob Hayward}
+\date{Feb 2019}
 \begin{document}
 
 \begin{frame}
@@ -34,7 +35,7 @@
 \end{frame}
 
 \section{Introduction}
-\begin{frame}{Equity valuation 2}
+\begin{frame}{Equity valuation}
 Two frameworks for assessing equity
 \begin{itemize}[<+-| alert@+>]
 \pause
@@ -47,7 +48,7 @@ Two frameworks for assessing equity
 \begin{frame}{Value Investment}
 \frametitle{Value investment}
 \begin{center}
-\includegraphics[height = 3.0in]{../../../Trading/Vlerick/Pictures/BGsmall}
+\includegraphics[height = 3.0in]{../../Pictures/BGsmall}
 \end{center}
 \end{frame}
 
@@ -82,6 +83,11 @@ Value investment depends upon
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Moats}
+\centering
+\includegraphics[scale=0.45]{../../Pictures/moat}
+\end{frame}
+
 \begin{frame}{Words of Warren}
 \begin{block}{}
 `I never attempt to make money on the stock market. I buy on the assumption that they could close the market the next day and not reopen it for 5 years'
@@ -94,6 +100,18 @@ Value investment depends upon
 \begin{block}{}
 `Price is what you pay. Value is what you get'
 \end{block}
+\end{frame}
+
+\begin{frame}{Moats}
+	Morningstar use the following criteria to measure moats
+\begin{itemize}[<+-| alert@+>]
+		\pause
+	\item Intangible assets
+	\item Cost advantage
+	\item Switching costs
+	\item Network effects
+	\item Efficient scale
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Joseph Piotroski}
@@ -127,7 +145,7 @@ Michael Porter (Harvard Business School)
 \begin{frame}{Michael Porter}
 \frametitle{Michael Porter}
 \begin{center}
-\includegraphics[height = 3.0in]{../Pictures/Michael_Porter}
+\includegraphics[height = 3.0in]{../../Pictures/Michael_Porter}
 \end{center}
 \end{frame}
 
@@ -146,68 +164,61 @@ Industry Rivalry
 \end{block}
 \end{frame}
 
-\begin{frame}{Bargaining power of suppliers}
-\begin{itemize}[<+-| alert@+>]
-\item How many substitute suppliers are there
-\item Impact of inputs on cost or differentiation
-\item Strength of distribution channel
-\item Supplier concentration
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Threat of substitutes}
-\begin{itemize}[<+-| alert@+>]
-\item Are there alternative products or services that serve the same need or desire?
-\item Propensity of buyers to switch
-\item Buyer switching costs
-\item Number of substitute products
-\item Quality of substitutes
-\item Price of substitutes
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Bargaining power of customers}
-\begin{itemize}[<+-| alert@+>]
-\item Buyer concentration
-\item Dependency on lines of distribution
-\item Sensitivity to buyer action (high fixed costs)
-\item Buyer sensitivity to price
-\item Buyer switching costs
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Threat of new entrants}
-\begin{itemize}[<+-| alert@+>]
-\item Existence of barriers to entry 
-\begin{itemize}
-\item patents
-\item rights 
-\end{itemize}
-\item Costs of entering
-\item Economies of scale
-\item Product differentiation
-\item Switching costs
-\item Possibility of retaliation
-\item Distribution channel
-\item Network effects
-\end{itemize}
-\end{frame}
+%\begin{frame}{Bargaining power of suppliers}
+%\begin{itemize}[<+-| alert@+>]
+%\item How many substitute suppliers are there
+%\item Impact of inputs on cost or differentiation
+%\item Strength of distribution channel
+%\item Supplier concentration
+%\end{itemize}
+%\end{frame}
+%
+%\begin{frame}{Threat of substitutes}
+%\begin{itemize}[<+-| alert@+>]
+%\item Are there alternative products or services that serve the same need or desire?
+%\item Propensity of buyers to switch
+%\item Buyer switching costs
+%\item Number of substitute products
+%\item Quality of substitutes
+%\item Price of substitutes
+%\end{itemize}
+%\end{frame}
+%
+%\begin{frame}{Bargaining power of customers}
+%\begin{itemize}[<+-| alert@+>]
+%\item Buyer concentration
+%\item Dependency on lines of distribution
+%\item Sensitivity to buyer action (high fixed costs)
+%\item Buyer sensitivity to price
+%\item Buyer switching costs
+%\end{itemize}
+%\end{frame}
+%
+%\begin{frame}{Threat of new entrants}
+%\begin{itemize}[<+-| alert@+>]
+%\item Existence of barriers to entry 
+%\begin{itemize}
+%\item patents
+%\item rights 
+%\end{itemize}
+%\item Costs of entering
+%\item Economies of scale
+%\item Product differentiation
+%\item Switching costs
+%\item Possibility of retaliation
+%\item Distribution channel
+%\item Network effects
+%\end{itemize}
+%\end{frame}
 
 \section{The Presentation}
 \begin{frame}{Valuation}
-Combine five-forces with
+	Please provide a 10 minute presentation on \textbf{ONE} of the following
 \pause
 \begin{itemize}[<+-| alert@+>]
-\item Comparison of PE ratios
-\begin{itemize}
-\item Justification for divergence
-\item Questions about difference
-\end{itemize}
-\item Pairs-trading 
-\begin{itemize}
-\item Justification for divergence
-\item Questions about changes
-\end{itemize}
+\item Criteria for identifying corporate success that can be sustained
+\item A sector, industry or firm that will generate outsize returns in future, and why \dots
+\item An investment where you believe that the risk is lower than that currently expected
 \end{itemize}
 \end{frame}
 
