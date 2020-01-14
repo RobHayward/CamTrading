@@ -1,4 +1,2 @@
-# CamTrading
-This will hold the materials for the Cambridge trading course
-
-- I will use Intro1.Rnw as the main document. 
+# Financial Markets and Trading
+Welcome to the course.  There are links to key materials that we will use in the class. 
